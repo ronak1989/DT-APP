@@ -1,0 +1,32 @@
+Options +FollowSymLinks
+Options -MultiViews
+ErrorDocument 404 /index.php
+<Location "/var/www/magazine/">
+    AuthType basic
+    AuthName "private area"
+    AuthBasicProvider  dbm
+    AuthDBMType        SDBM  AuthDBMUserFile    "/www/etc/dbmpasswd"
+    Require            valid-user
+</Location>
+AuthType Basic
+AuthName "Password Protected Area"
+AuthUserFile /var/www/magazine/.htpasswd
+Require valid-user
+<IfModule mod_rewrite.c>
+
+    RewriteEngine On
+    RewriteBase /
+    # Redirect Trailing Slashes...
+    # Handle Front Controller...
+    #RewriteCond %{REQUEST_FILENAME} !-f
+    #RewriteCond %{REQUEST_FILENAME} !-d
+    #RewriteRule ^master master_route.php [L,QSA]
+
+#    RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}\.php -f
+#    RewriteRule ^(.*)$ $1.php [L]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php?route=$1 [L,QSA]
+</IfModule>
+
