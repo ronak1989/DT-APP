@@ -1,3 +1,3 @@
 [submodule "class/swiftmailer"]
-path = class/swiftmailer
-url = git@github.com:swiftmailer/swiftmailer.git
+	path = class/swiftmailer
+	url = git@github.com:swiftmailer/swiftmailer.git
