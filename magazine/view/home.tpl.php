@@ -146,8 +146,7 @@ foreach ($this->_data['whydt']['featurelist-right'] as $key => $value) {
               <h2>Sneak Peek</h2>
             </div>
             <div style="text-align: justify;">
-                <p>“Dalal Times Magazine's eighth issue features the esteemed owner of one of the oldest brokers in India, Nirmal Bang Securities. Read as Mr. Kishore Bang shares his thoughts on the Indian Stock Market.</p>
-                <p>Also pore over our first piece of “Make or Break” and see for yourself on how this section proves that bigger risks give out bigger rewards. Other new addition, "Technically Speaking” presents the technical aspects of stocks from a particular industry.</p>
+                <p>The ninth issue of Dalal Times Magazine showcases an upcoming trend in Broking services with Nithin Kamath, Founder and CEO of Zerodha, in the spotlight. The cover story explores his journey and offers valuable insight to other brokers and broking firms. The magazine also carries sections like Gems In The Offing, Pink Stock, Make Or Break and Technically Speaking; segments that have earned us the title of ‘Most Preferred Stock Market Magazine In India’, by our readers.</p>
               </div>
           </div>
         </div>
