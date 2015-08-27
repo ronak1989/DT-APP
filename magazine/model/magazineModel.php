@@ -823,7 +823,7 @@ class magazineModel extends Database {
 	}
 
 	protected function getAboutSection() {
-		return array('img' => 'public/images/magazine_cover.png', 'content' => '<p>Dalal Times Magazine, a monthly publication, takes into account events, news and views of an entire month and helps translate them in to its impact on the share market.</p>
+		return array('img' => 'public/images/magazine_cover.jpg', 'content' => '<p>Dalal Times Magazine, a monthly publication, takes into account events, news and views of an entire month and helps translate them in to its impact on the share market.</p>
           <p>We leverage this form of media to reach out to our readers who not only constitute of investors and traders but also keen individuals who desire to benefit from our teams research and analytics expertise in equity market.</p>
           <p>Our aim is to keep you ahead of the market fluctuations and stay true to the magazine’s motto ‘Voice Of The Indian Stock Market’.</p>', );
 	}
@@ -1326,15 +1326,15 @@ class magazineModel extends Database {
 			if ($this->execute()) {
 				if ($order_status == 'Success') {
 					//if (base64_decode($_SESSION['_uid']) == 14) {
-						$mailerDetails['username'] = $this->_queryResult[0]['name'];
-						$mailerDetails['useremail'] = $this->_queryResult[0]['emailid'];
-						if ($this->_queryResult[0]['subscription_type'] == 'digital') {
-							$mailerDetails['pkg_details'] = $this->_queryResult[0]['no_of_months'] . ' months eMagazine';
-						} else {
-							$mailerDetails['pkg_details'] = $this->_queryResult[0]['no_of_months'] . ' months Magazine (Print + Digital)';
-						}
-						$mailerDetails['pkg_startdt'] = date('F Y', strtotime($magazineIssueDt['startDt']));
-						$mailerDetails['pkg_enddt'] = date('F Y', strtotime($magazineIssueDt['endDt']));
+					$mailerDetails['username'] = $this->_queryResult[0]['name'];
+					$mailerDetails['useremail'] = $this->_queryResult[0]['emailid'];
+					if ($this->_queryResult[0]['subscription_type'] == 'digital') {
+						$mailerDetails['pkg_details'] = $this->_queryResult[0]['no_of_months'] . ' months eMagazine';
+					} else {
+						$mailerDetails['pkg_details'] = $this->_queryResult[0]['no_of_months'] . ' months Magazine (Print + Digital)';
+					}
+					$mailerDetails['pkg_startdt'] = date('F Y', strtotime($magazineIssueDt['startDt']));
+					$mailerDetails['pkg_enddt'] = date('F Y', strtotime($magazineIssueDt['endDt']));
 					//}
 
 					$pkg_details = $this->getSubscriptionPackages($this->_queryResult[0]['package_id']);
