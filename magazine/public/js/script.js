@@ -220,6 +220,21 @@ if(load_js == 1){
      $('.flex_text').find('li').css({ height: height + 'px' });
         }
     });
+
+   $('.slider').flexslider({
+        animation: "slide",
+    selector: ".slides li",
+    controlNav: false,
+    directionNav: false,
+    slideshowSpeed: 10000,
+    touch: true,
+    useCSS: false,
+    direction: "vertical",
+        before: function(slider){
+     var height = $('.slider').find('.flex-viewport').innerHeight();
+     $('.slider').find('li').css({ height: height + 'px' });
+        }
+    });
 }
 
 // ----------initializing the wow.js ---------

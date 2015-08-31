@@ -703,7 +703,7 @@ section.banner-carousel {
 .text-slider {
   margin-bottom: 30px;
 }
-.flex_text ul {
+.slider ul, .flex_text ul {
   padding-left: 0;
 }
 .flex_text li {
@@ -713,6 +713,16 @@ section.banner-carousel {
   color: #fff;
   min-height: 40px;
   line-height: 40px;
+  margin-bottom: 0;
+}
+
+.slider li {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  min-height: 18px;
+  line-height: 18px;
   margin-bottom: 0;
 }
 
@@ -2238,3 +2248,4 @@ box-shadow: 0px -3px 8px 1px rgba(0,0,0,0.75);
 }
 
 /*#static_menu{margin-left:-50px;}*/
+marquee {color:#FFFFFF;font-weight: 700;font-size: 1.2em;}
