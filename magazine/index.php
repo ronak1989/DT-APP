@@ -4,6 +4,10 @@ error_reporting(E_ALL);
 if (isset($_GET['_q'])) {
 	$_SESSION['q'] = $_GET['_q'];
 }
+if (isset($_GET['_brtr'])) {
+	unset($_SESSION['_q']);
+	$_SESSION['brtr'] = $_GET['_brtr'];
+}
 require_once 'constants.php';
 require_once _CONST_CLASS_PATH . 'AltoRouter.php';
 $_router = new AltoRouter();
