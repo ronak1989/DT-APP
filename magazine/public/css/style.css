@@ -718,11 +718,11 @@ section.banner-carousel {
 
 .slider li {
   text-align: center;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 700;
   color: #fff;
-  min-height: 18px;
-  line-height: 18px;
+  min-height: 22px;
+  line-height: 22px;
   margin-bottom: 0;
 }
 
