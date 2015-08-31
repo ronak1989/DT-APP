@@ -15,7 +15,15 @@ require_once _CONST_VIEW_PATH . 'header.php';
       <div class="trans-bg">
         <div class="container-fluid">
           <div class="row">
+            <div>
+              <div class="text-slider slider">
+                  <ul class="slides">
+                     <li>For more information please call our toll free no : 1800-2700-479</li>
+                     <li style="color:#FBDA00">For more information please call our toll free no : 1800-2700-479</li>
+                  </ul>
+            </div>
             <div class="col-sm-12">
+
               <h2><a href="" class="dt-logo"><img src="public/images/dtlogo_white.png"></a></h2> <!-- .lg-logo -->
               <h2 class="MT80"><a href="" class="dtm-logo"><img src="public/images/magazinelogo_white.png"></a></h2> <!-- .lg-logo -->
                  <!-- Text slider start here -->
