@@ -316,6 +316,7 @@ if ($_SESSION['_loggedIn'] == 1) {
 	$complete_issue_list = '';
 	if ($this->_data['result'] > 0) {
 		$issue_array = array(
+			'september2015' => array('issue' => 'September 2015 issue', 'issue_url' => '/magazine/september2015', 'issue_cover_img' => 'view/september2015/cover.jpg'),
 			'august2015' => array('issue' => 'August 2015 issue', 'issue_url' => '/magazine/august2015', 'issue_cover_img' => 'view/august2015/cover.jpg'),
 		);
 		$complete_issue_list = '<div class="active item">
@@ -328,6 +329,7 @@ if ($_SESSION['_loggedIn'] == 1) {
     </div>';
 	}
 	$partial_issue_array = array(
+		'september2015' => array('issue' => 'September 2015 issue', 'issue_url' => '/sneak-preview/september2015', 'issue_cover_img' => 'view/partial-september2015/cover.jpg'),
 		'august2015' => array('issue' => 'August 2015 issue', 'issue_url' => '/sneak-preview/august2015', 'issue_cover_img' => 'view/partial-august2015/cover.jpg'),
 		'july2015' => array('issue' => 'July 2015 issue', 'issue_url' => '/sneak-preview/july2015', 'issue_cover_img' => 'view/partial-july2015/cover.jpg'),
 		'june2015' => array('issue' => 'June 2015 issue', 'issue_url' => '/sneak-preview/june2015', 'issue_cover_img' => 'view/partial-june2015/cover.jpg'),
