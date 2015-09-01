@@ -58,9 +58,8 @@ class magazine extends magazineModel {
                       </div>
                     </div>
                   </div>';
-			$this->_data['result'] = $this->_magazineModel->checkAccessValidity();
+			$this->_data['completeIssues'] = $this->_magazineModel->checkAccessValidity();
 			$this->_data['partialIssues'] = $this->_magazineModel->getPartialIssueList();
-			$this->_data['partialIssues'];
 		} else {
 			$this->_data['show_login'] = 1;
 			$this->_data['header_text'] = '<div style="display:inline-block;vertical-align: bottom; padding-right:10px;">';
@@ -160,7 +159,7 @@ class magazine extends magazineModel {
                       </div>
                     </div>
                   </div>';
-			$this->_data['result'] = 0;
+			$this->_data['completeIssues'] = 0;
 		}
 
 		$this->_data['aboutdt'] = $this->_magazineModel->getAboutSection();
@@ -545,7 +544,7 @@ class magazine extends magazineModel {
 
 	public function showSubscribedBook() {
 		$this->_data['result'] = $this->_magazineModel->checkAccessValidity($this->_issue);
-		if ($this->_data['result'] > 0) {
+		if (in_array($this->_issue, $this->_data['result'])) {
 			require_once _CONST_VIEW_PATH . $this->_issue . '/index.php';
 		}
 	}
