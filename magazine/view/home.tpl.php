@@ -320,6 +320,14 @@ if ($_SESSION['_loggedIn'] == 1) {
 			'august2015' => array('issue' => 'August 2015 issue', 'issue_url' => '/magazine/august2015', 'issue_cover_img' => 'view/august2015/cover.jpg'),
 		);
 		$complete_issue_list = '<div class="active item">
+      <a href="' . $issue_array['september2015']['issue_url'] . '" target="_new">
+        <span>
+           <img src="' . $issue_array['september2015']['issue_cover_img'] . '" width="189px" height="260px">
+         </span>
+      </a>
+      <a href="' . $issue_array['september2015']['issue_url'] . '" target="_new"><span class="reviewer-name">' . $issue_array['september2015']['issue'] . '</span></a>
+    </div>
+    <div class="item">
       <a href="' . $issue_array['august2015']['issue_url'] . '" target="_new">
         <span>
            <img src="' . $issue_array['august2015']['issue_cover_img'] . '" width="189px" height="260px">
