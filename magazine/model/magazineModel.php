@@ -1297,12 +1297,28 @@ class magazineModel extends Database {
 		}
 		$this->beginTransaction();
 		$mailerDetails = array();
-		$this->_modelQuery = "SELECT usr.user_id, usr.name, usr.emailid,  ordr.package_id, pkgs.subscription_type,pkgs.no_of_months, pkgs.package_name,ordr.uid from order_details ordr JOIN subscription_packages pkgs ON pkgs.package_id = ordr.package_id JOIN users usr on usr.uid = ordr.uid where order_id=:order_id and ordr.order_status IN ('pending','processing') LOCK IN SHARE MODE";
+		$this->_modelQuery = "SELECT usr.user_id, usr.name, usr.emailid,  ordr.package_id, pkgs.subscription_type,pkgs.no_of_months, pkgs.package_name,ordr.uid, ordr.promotional from order_details ordr JOIN subscription_packages pkgs ON pkgs.package_id = ordr.package_id JOIN users usr on usr.uid = ordr.uid where order_id=:order_id and ordr.order_status IN ('pending','processing') LOCK IN SHARE MODE";
 		$this->query($this->_modelQuery);
 		$this->bindByValue('order_id', $parameter['order_id']);
 		$this->_queryResult = $this->resultset();
 		if ($this->_queryResult) {
-			$magazineIssueDt = $this->getMagazineStartEndDate($this->_queryResult[0]['no_of_months']);
+			if ($this->_queryResult[0]['promotional'] == 'zerodha') {
+				switch ($this->_queryResult[0]['no_of_months']) {
+					case '12':
+						$magazineIssueDt = array('startDt' => '2015-09-01 00:00:00', 'endDt' => '2016-08-01 23:59:59');
+						break;
+					case '24':
+						$magazineIssueDt = array('startDt' => '2015-09-01 00:00:00', 'endDt' => '2017-08-01 23:59:59');
+						break;
+					default:
+						$magazineIssueDt = $this->getMagazineStartEndDate($this->_queryResult[0]['no_of_months']);
+						break;
+				}
+				//$magazineIssueDt = array('startDt' => '2015-01-09 00:00:00', 'endDt' => $lastIssue);
+			} else {
+				$magazineIssueDt = $this->getMagazineStartEndDate($this->_queryResult[0]['no_of_months']);
+			}
+
 			$this->_modelQuery = 'UPDATE `order_details`
             SET
             `order_status` = "' . $updt_status . '",
