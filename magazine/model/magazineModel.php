@@ -1435,11 +1435,22 @@ class magazineModel extends Database {
 	}
 
 	protected function checkAccessValidity() {
-		$this->_modelQuery = 'select count(1) as cnt from order_details where order_status="processed" and uid=:uid and substr(created_date,1,10) > "2015-07-28"';
+		$this->_modelQuery = 'select issue_startdt, issue_enddt from order_details where order_status="processed" and uid=:uid order by order_id asc';
 		$this->query($this->_modelQuery);
 		$this->bindByValue('uid', base64_decode($_SESSION['_uid']));
 		$this->_queryResult = $this->resultset();
-		return $this->_queryResult[0]['cnt'];
+		foreach ($this->_queryResult as $key => $value) {
+			$start = (new DateTime($value['issue_startdt']))->modify('first day of this month');
+			$end = (new DateTime($value['issue_enddt']))->modify('first day of this month');
+			$interval = DateInterval::createFromDateString('1 month');
+			$period = new DatePeriod($start, $interval, $end);
+
+			foreach ($period as $dt) {
+				$months[] = strtolower($dt->format("FY"));
+			}
+		}
+
+		return $months;
 	}
 }
 ?>

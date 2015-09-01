@@ -314,27 +314,31 @@ foreach ($this->_data['subscribe'] as $key => $value) {
 <?php
 if ($_SESSION['_loggedIn'] == 1) {
 	$complete_issue_list = '';
-	if ($this->_data['result'] > 0) {
+	if (is_array($this->_data['completeIssues'])) {
 		$issue_array = array(
 			'september2015' => array('issue' => 'September 2015 issue', 'issue_url' => '/magazine/september2015', 'issue_cover_img' => 'view/september2015/cover.jpg'),
 			'august2015' => array('issue' => 'August 2015 issue', 'issue_url' => '/magazine/august2015', 'issue_cover_img' => 'view/august2015/cover.jpg'),
 		);
-		$complete_issue_list = '<div class="active item">
-      <a href="' . $issue_array['september2015']['issue_url'] . '" target="_new">
-        <span>
-           <img src="' . $issue_array['september2015']['issue_cover_img'] . '" width="189px" height="260px">
-         </span>
-      </a>
-      <a href="' . $issue_array['september2015']['issue_url'] . '" target="_new"><span class="reviewer-name">' . $issue_array['september2015']['issue'] . '</span></a>
-    </div>
-    <div class="item">
-      <a href="' . $issue_array['august2015']['issue_url'] . '" target="_new">
-        <span>
-           <img src="' . $issue_array['august2015']['issue_cover_img'] . '" width="189px" height="260px">
-         </span>
-      </a>
-      <a href="' . $issue_array['august2015']['issue_url'] . '" target="_new"><span class="reviewer-name">' . $issue_array['august2015']['issue'] . '</span></a>
-    </div>';
+		$this->_data['completeIssues'] = array_flip($this->_data['completeIssues']);
+		$this->_data['completeIssues'] = array_intersect_key($issue_array, $this->_data['completeIssues']);
+		$cntr = 0;
+		foreach ($this->_data['completeIssues'] as $key => $value) {
+			if ($cntr == 0) {
+				$active_cls = 'active';
+			} else {
+				$active_cls = '';
+			}
+
+			$complete_issue_list .= '<div class="' . $active_cls . ' item">
+        <a href="' . $value['issue_url'] . '" target="_new">
+          <span>
+             <img src="' . $value['issue_cover_img'] . '" width="189px" height="260px">
+           </span>
+        </a>
+        <a href="' . $value['issue_url'] . '" target="_new"><span class="reviewer-name">' . $value['issue'] . '</span></a>
+      </div>';
+			$cntr++;
+		}
 	}
 	$partial_issue_array = array(
 		'september2015' => array('issue' => 'September 2015 issue', 'issue_url' => '/sneak-preview/september2015', 'issue_cover_img' => 'view/partial-september2015/cover.jpg'),
