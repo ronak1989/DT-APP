@@ -154,7 +154,7 @@ foreach ($this->_data['whydt']['featurelist-right'] as $key => $value) {
               <h2>Sneak Peek</h2>
             </div>
             <div style="text-align: justify;">
-                <p>The ninth issue of Dalal Times Magazine showcases an upcoming trend in Broking services with Nithin Kamath, Founder and CEO of Zerodha, in the spotlight. The cover story explores his journey and offers valuable insight to other brokers and broking firms. The magazine also carries sections like Gems In The Offing, Pink Stock, Make Or Break and Technically Speaking; segments that have earned us the title of ‘Most Preferred Stock Market Magazine In India’, by our readers.</p>
+                <p>The eleventh issue of Dalal Times Magazine showcases an upcoming trend in Broking services with Nithin Kamath, Founder and CEO of Zerodha, in the spotlight. The cover story explores his journey and offers valuable insight to other brokers and broking firms. The magazine also carries sections like Gems In The Offing, Pink Stock, Make Or Break and Technically Speaking; segments that have earned us the title of ‘Most Preferred Stock Market Magazine In India’, by our readers.</p>
               </div>
           </div>
         </div>
