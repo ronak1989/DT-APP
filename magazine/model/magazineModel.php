@@ -1261,16 +1261,22 @@ class magazineModel extends Database {
 		return $this->_details;
 	}
 
-	private function getMagazineStartEndDate($months) {
+	private function getMagazineStartEndDate($months, $type) {
 		$curMonth = date('n');
 		$curYear = date('Y');
-
-		if ($curMonth == 12) {
-			$firstIssue = date('Y-m-d H:i:s', mktime(0, 0, 0, 0, 0, $curYear + 1));
-		} else {
-			$firstIssue = date('Y-m-d H:i:s', mktime(0, 0, 0, $curMonth + 1, 1));
+		switch ($type) {
+			case 'digital':
+				$firstIssue = ($curMonth == 12) ? date('Y-m-d H:i:s', mktime(0, 0, 0, 0, 0, $curYear + 1)) : date('Y-m-d H:i:s', mktime(0, 0, 0, $curMonth + 1, 1));
+				break;
+			default:
+				$d = date('d');
+				if ($d < 16) {
+					$firstIssue = ($curMonth == 12) ? date('Y-m-d H:i:s', mktime(0, 0, 0, 0, 0, $curYear)) : date('Y-m-d H:i:s', mktime(0, 0, 0, $curMonth, 1));
+				} else {
+					$firstIssue = ($curMonth == 12) ? date('Y-m-d H:i:s', mktime(0, 0, 0, 0, 0, $curYear + 1)) : date('Y-m-d H:i:s', mktime(0, 0, 0, $curMonth + 1, 1));
+				}
+				break;
 		}
-
 		$lastIssue = date('Y-m-01 23:59:59', strtotime('+' . ($months - 1) . ' months', strtotime($firstIssue)));
 		return array('startDt' => $firstIssue, 'endDt' => $lastIssue);
 	}
