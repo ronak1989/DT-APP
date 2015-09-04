@@ -833,7 +833,7 @@ class magazineModel extends Database {
 	protected function getAboutSection() {
 		return array('img' => 'public/images/magazine_cover.jpg', 'content' => '<p>Dalal Times Magazine, a monthly publication, takes into account events, news and views of an entire month and helps translate them in to its impact on the share market.</p>
           <p>We leverage this form of media to reach out to our readers who not only constitute of investors and traders but also keen individuals who desire to benefit from our teams research and analytics expertise in equity market.</p>
-          <p>Our aim is to keep you ahead of the market fluctuations and stay true to the magazine’s motto ‘Voice Of The Indian Stock Market’.</p>');
+          <p>Our aim is to keep you ahead of the market fluctuations and stay true to the magazine’s motto ‘Voice Of The Indian Stock Market’.</p>', );
 	}
 
 	protected function getWhyDtSection() {
@@ -1264,19 +1264,7 @@ class magazineModel extends Database {
 	private function getMagazineStartEndDate($months, $type) {
 		$curMonth = date('n');
 		$curYear = date('Y');
-		switch ($type) {
-			case 'digital':
-				$firstIssue = ($curMonth == 12) ? date('Y-m-d H:i:s', mktime(0, 0, 0, 0, 0, $curYear + 1)) : date('Y-m-d H:i:s', mktime(0, 0, 0, $curMonth + 1, 1));
-				break;
-			default:
-				$d = date('d');
-				if ($d < 16) {
-					$firstIssue = ($curMonth == 12) ? date('Y-m-d H:i:s', mktime(0, 0, 0, 0, 0, $curYear)) : date('Y-m-d H:i:s', mktime(0, 0, 0, $curMonth, 1));
-				} else {
-					$firstIssue = ($curMonth == 12) ? date('Y-m-d H:i:s', mktime(0, 0, 0, 0, 0, $curYear + 1)) : date('Y-m-d H:i:s', mktime(0, 0, 0, $curMonth + 1, 1));
-				}
-				break;
-		}
+		$firstIssue = ($curMonth == 12) ? date('Y-m-d H:i:s', mktime(0, 0, 0, 0, 0, $curYear + 1)) : date('Y-m-d H:i:s', mktime(0, 0, 0, $curMonth + 1, 1));
 		$lastIssue = date('Y-m-01 23:59:59', strtotime('+' . ($months - 1) . ' months', strtotime($firstIssue)));
 		return array('startDt' => $firstIssue, 'endDt' => $lastIssue);
 	}
@@ -1317,12 +1305,12 @@ class magazineModel extends Database {
 						$magazineIssueDt = array('startDt' => '2015-09-01 00:00:00', 'endDt' => '2017-08-01 23:59:59');
 						break;
 					default:
-						$magazineIssueDt = $this->getMagazineStartEndDate($this->_queryResult[0]['no_of_months'], $this->_queryResult[0]['subscription_type']);
+						$magazineIssueDt = $this->getMagazineStartEndDate($this->_queryResult[0]['no_of_months']);
 						break;
 				}
 				//$magazineIssueDt = array('startDt' => '2015-01-09 00:00:00', 'endDt' => $lastIssue);
 			} else {
-				$magazineIssueDt = $this->getMagazineStartEndDate($this->_queryResult[0]['no_of_months'], $this->_queryResult[0]['subscription_type']);
+				$magazineIssueDt = $this->getMagazineStartEndDate($this->_queryResult[0]['no_of_months']);
 			}
 
 			$this->_modelQuery = 'UPDATE `order_details`
