@@ -45,7 +45,7 @@ require_once _CONST_VIEW_PATH . 'header.php';
                 <a href="#testimonial" title="Testimonial" class="testimonial" data-id="7"><i class="fa fa-commenting"></i></a>
               </li>
               <li>
-                <a href="#carrer" title="Carriers" class="carrer" data-id="8">
+                <a href="#carrer" title="Carrers" class="carrer" data-id="8">
                       <i class="fa fa-briefcase" ></i>
                 </a>
               </li>
