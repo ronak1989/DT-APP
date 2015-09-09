@@ -350,7 +350,6 @@ $(document).ready(function() {
   });
   $(document).on('change','#delivery_option',function(e){
       var option = $('#delivery_option:checked').val();
-      console.log(option);
       if(option=='Postal'){
         $(".notes").html('**Indian Postal Service is responsible for all postal deliveries.');
       }else{
