@@ -348,7 +348,16 @@ $(document).ready(function() {
   $(document).on('focus',"input[type=text],input[type=password],input[type=email],textarea,select",function(e){
     removeErrorMsg(this);
   });
-
+  $(document).on('change','#delivery_option',function(e){
+      var option = $('#delivery_option:checked').val();
+      console.log(option);
+      if(option=='Postal'){
+        $(".notes").html('**Indian Postal Service is responsible for all postal deliveries.');
+      }else{
+        $(".notes").html('**Courier charges will be extra');
+      }
+    }
+  );
   $(document).on('click',"#forgotpassword, #changepassword, #register, #login, #subscribeorder, #signin, #signup, #askdt",function(e) {
     e.preventDefault();
     e.stopPropagation();

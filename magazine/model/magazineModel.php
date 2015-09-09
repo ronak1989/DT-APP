@@ -733,10 +733,10 @@ class magazineModel extends Database {
                     <div class="col-sm-6">
                       <div>
                         <div class="span-form">
-                          <label class="radio-inline" style="color:#000000;font-weight: bold"><input type="radio" name="delivery_option" id="delivery_option" value="Postal" checked>Postal</label>
+                          <label class="radio-inline" style="color:#000000;font-weight: bold"><input type="radio" name="delivery_option" id="delivery_option" value="Postal" >Postal</label>
                         </div>
                         <div class="span-form">
-                          <label class="radio-inline" style="color:#000000;font-weight: bold"><input type="radio" name="delivery_option" id="delivery_option" value="Courier">Courier</label>
+                          <label class="radio-inline" style="color:#000000;font-weight: bold"><input type="radio" name="delivery_option" id="delivery_option" value="Courier" checked>Courier</label>
                         </div>
                       </div>
                     </div>
