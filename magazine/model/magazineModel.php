@@ -833,7 +833,7 @@ class magazineModel extends Database {
 	protected function getAboutSection() {
 		return array('img' => 'public/images/magazine_cover.jpg', 'content' => '<p>Dalal Times Magazine, a monthly publication, takes into account events, news and views of an entire month and helps translate them in to its impact on the share market.</p>
           <p>We leverage this form of media to reach out to our readers who not only constitute of investors and traders but also keen individuals who desire to benefit from our teams research and analytics expertise in equity market.</p>
-          <p>Our aim is to keep you ahead of the market fluctuations and stay true to the magazine’s motto ‘Voice Of The Indian Stock Market’.</p>', );
+          <p>Our aim is to keep you ahead of the market fluctuations and stay true to the magazine’s motto ‘Voice Of The Indian Stock Market’.</p>');
 	}
 
 	protected function getWhyDtSection() {
@@ -1131,7 +1131,7 @@ class magazineModel extends Database {
 			$decrypted_string = $this->decrypt_string($_SESSION['brtr']);
 		}
 		if (trim($decrypted_string) != '') {
-			$this->_modelQuery = 'INSERT INTO `order_details`(`package_id`,`uid`,`subscription_type`,`subscription_amount`,`delivery_method`,`promotional`)VALUES(:package_id,:uid,:subscription_type,:subscription_amount,:delivery_method,"' . $decrypted_string . '")';
+			$this->_modelQuery = 'INSERT INTO `order_details`(`package_id`,`uid`,`subscription_type`,`subscription_amount`,`delivery_method`,`promotional`)VALUES(:package_id,:uid,:subscription_type,:subscription_amount,:delivery_method,"' . trim($decrypted_string) . '")';
 		} else {
 			$this->_modelQuery = 'INSERT INTO `order_details`(`package_id`,`uid`,`subscription_type`,`subscription_amount`,`delivery_method`)VALUES(:package_id,:uid,:subscription_type,:subscription_amount,:delivery_method)';
 		}
