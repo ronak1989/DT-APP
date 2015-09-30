@@ -833,7 +833,7 @@ class magazineModel extends Database {
 	protected function getAboutSection() {
 		return array('img' => 'public/images/magazine_cover.jpg', 'content' => '<p>Dalal Times Magazine, a monthly publication, takes into account events, news and views of an entire month and helps translate them in to its impact on the share market.</p>
           <p>We leverage this form of media to reach out to our readers who not only constitute of investors and traders but also keen individuals who desire to benefit from our teams research and analytics expertise in equity market.</p>
-          <p>Our aim is to keep you ahead of the market fluctuations and stay true to the magazine’s motto ‘Voice Of The Indian Stock Market’.</p>', );
+          <p>Our aim is to keep you ahead of the market fluctuations and stay true to the magazine’s motto ‘Voice Of The Indian Stock Market’.</p>');
 	}
 
 	protected function getWhyDtSection() {
@@ -857,7 +857,7 @@ class magazineModel extends Database {
 		);
 
 		$this->_details['featurelist-right'][0] = array(
-			'mouseover' => 'public/images/bulls_and_bears.jpg',
+			'mouseover' => 'public/images/make_or_break.jpg',
 			'heading' => 'Make Or Break',
 			'content' => '<p>Any penny stock that could make you a fortune? On the request of our readers Dalal Times Magazine introduced this section to make the most from penny stocks that could make it big. Of course such scrips do carry their own share of risk, but what gain without risk.</p>',
 		);
@@ -871,7 +871,7 @@ class magazineModel extends Database {
 		$this->_details['featurelist-right'][2] = array(
 			'mouseover' => 'public/images/bulls_and_bears.jpg',
 			'heading' => 'Bulls and Bears',
-			'content' => '<p>Get your ratings straight here for the various happenings in different companies of different sectors. Let us give you a heads-up why we think a particular turn of events is good or bad with our Bulls (positive rating) or Bears (negative rating)</p>',
+			'content' => '<p>Could a corporate decision impact stock price? Get that heads-up on how certain business decisions will turn Bullish or Bearish for the company involved. </p>',
 		);
 
 		$this->_details['cover_img'] = 'public/images/whyread_cover.jpg';

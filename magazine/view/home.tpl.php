@@ -60,7 +60,7 @@ require_once _CONST_VIEW_PATH . 'header.php';
 ?>
                    <li><a href="#ask_dt" class="btn-download">Ask DT</a></li>
 <?php if ($_SESSION['_loggedIn'] != 1) {?>
-                   <li><a class="btn-download" onclick="load_popup(1);" href="javascript:void(0);">Free Trial Subscription</a></li>
+                   <li><a class="btn-download" onclick="load_popup(1);" href="javascript:void(0);" style="background:#FBDA00;color:#000000">Free Trial Subscription</a></li>
      <?php }
 ?>
                   </ul>
@@ -163,8 +163,7 @@ foreach ($this->_data['whydt']['featurelist-right'] as $key => $value) {
               <h2>Sneak Peek</h2>
             </div>
             <div style="text-align: justify;">
-                <p>The October issue of Dalal Times Magazine has put focus on an eminent personality in the Capital Markets; Mr Kapil Bali, CEO of YES Securities, a 100% subsidiary of YES Bank and his thoughts and understanding on how the markets have evolved and what can be expected from them. Also this month, take note of our other sections like How Good a Bet (Essel Propack), our elaborative feature in F Factor which talks about the latest participants in the Banking sector; namely the Payment Banks.</p>
-                <p>Also, monthly recommendations in Gems in the Offing and Pink Stock give your portfolio an overhaul to prepare for the longer run. So, subscribe now to get better returns on your investments.  </p>
+                <p>The October issue of Dalal Times Magazine discusses long-term investment mantra with Kapil Bali, ED and CEO of YES Securities, a 100% subsidiary of YES Bank. The twelfth issue of the magazine also brings to you reader-favourite segments like How Good A Bet, Gems In The Offing, Make Or Break et al. for investors to make better and informed portfolio decisions. Subscribe and read stock recommendations and suggestions that hold ground even in the present turbulent phase of the market. </p>
               </div>
           </div>
         </div>
