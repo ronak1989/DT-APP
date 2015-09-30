@@ -59,6 +59,10 @@ require_once _CONST_VIEW_PATH . 'header.php';
 		 <?php }
 ?>
                    <li><a href="#ask_dt" class="btn-download">Ask DT</a></li>
+<?php if ($_SESSION['_loggedIn'] != 1) {?>
+                   <li><a class="btn-download" onclick="load_popup(1);" href="javascript:void(0);">Free Trial Subscription</a></li>
+     <?php }
+?>
                   </ul>
                  <!-- </div> -->
             </div>
@@ -322,6 +326,7 @@ if ($_SESSION['_loggedIn'] == 1) {
 	$complete_issue_list = '';
 	if (is_array($this->_data['completeIssues'])) {
 		$issue_array = array(
+			'october2015' => array('issue' => 'October 2015 issue', 'issue_url' => '/magazine/october2015', 'issue_cover_img' => 'view/october2015/cover.jpg'),
 			'september2015' => array('issue' => 'September 2015 issue', 'issue_url' => '/magazine/september2015', 'issue_cover_img' => 'view/september2015/cover.jpg'),
 			'august2015' => array('issue' => 'August 2015 issue', 'issue_url' => '/magazine/august2015', 'issue_cover_img' => 'view/august2015/cover.jpg'),
 		);
@@ -347,6 +352,7 @@ if ($_SESSION['_loggedIn'] == 1) {
 		}
 	}
 	$partial_issue_array = array(
+		'october2015' => array('issue' => 'October 2015 issue', 'issue_url' => '/sneak-preview/october2015', 'issue_cover_img' => 'view/partial-october2015/cover.jpg'),
 		'september2015' => array('issue' => 'September 2015 issue', 'issue_url' => '/sneak-preview/september2015', 'issue_cover_img' => 'view/partial-september2015/cover.jpg'),
 		'august2015' => array('issue' => 'August 2015 issue', 'issue_url' => '/sneak-preview/august2015', 'issue_cover_img' => 'view/partial-august2015/cover.jpg'),
 		'july2015' => array('issue' => 'July 2015 issue', 'issue_url' => '/sneak-preview/july2015', 'issue_cover_img' => 'view/partial-july2015/cover.jpg'),
@@ -355,6 +361,9 @@ if ($_SESSION['_loggedIn'] == 1) {
 		'april2015' => array('issue' => 'April 2015 issue', 'issue_url' => '/sneak-preview/april2015', 'issue_cover_img' => 'view/partial-april2015/cover.jpg'),
 		'march2015' => array('issue' => 'March 2015 issue', 'issue_url' => '/sneak-preview/march2015', 'issue_cover_img' => 'view/partial-march2015/cover.jpg'),
 	);
+	if ($complete_issue_list == '') {
+		$register_text = '<a href="http://magazine.dalaltimes.com#registration_sub" style="text-decoration:none;"><h5 style="color:#FFFFFF;font-size:18px;">This is a partial copy. To get the latest issue or to read full version <span class="reviewer-name" style="color:#428bca">SUBSCRIBE NOW</span></h5></a>';
+	}
 	$partial_issue_list = '';
 	$this->_data['partialIssues'] = array_reverse($this->_data['partialIssues']);
 	for ($i = 0; $i < count($this->_data['partialIssues']); $i++) {
@@ -392,6 +401,9 @@ if ($_SESSION['_loggedIn'] == 1) {
                 <a class="carousel-control right" href="#myCarousel1" data-slide="next"><i class="fa fa-angle-right"></i></a>
               </div>
             </div>
+          </div>
+          <div class="row text-center">
+            <?php echo $register_text;?>
           </div>
         </div>
       </div> <!-- /.trans-bg -->
