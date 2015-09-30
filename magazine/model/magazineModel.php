@@ -869,9 +869,9 @@ class magazineModel extends Database {
 		);
 
 		$this->_details['featurelist-right'][2] = array(
-			'mouseover' => 'public/images/promising_india.jpg',
-			'heading' => 'Technically Speaking',
-			'content' => '<p>Need short-term options? The master minds of technical analysis spot some such opportunities for you to make the most from. Know your entry......</p>',
+			'mouseover' => 'public/images/bulls_and_bears.jpg',
+			'heading' => 'Bulls and Bears',
+			'content' => '<p>Get your ratings straight here for the various happenings in different companies of different sectors. Let us give you a heads-up why we think a particular turn of events is good or bad with our Bulls (positive rating) or Bears (negative rating)</p>',
 		);
 
 		$this->_details['cover_img'] = 'public/images/whyread_cover.jpg';
