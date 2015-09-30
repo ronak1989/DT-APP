@@ -18,8 +18,13 @@ require_once _CONST_VIEW_PATH . 'header.php';
             <div>
               <div class="text-slider slider">
                   <ul class="slides">
+                    <?php /*if ($_SESSION['_loggedIn'] == 1) {*/?>
+                    <!--  <li>For more information please call our toll free no : 1800-2700-479</li>
+                     <li style="color:#FBDA00">For more information please call our toll free no : 1800-2700-479</li> -->
+                     <?php /*} else {*/?>
                      <li>For more information please call our toll free no : 1800-2700-479</li>
                      <li style="color:#FBDA00">For more information please call our toll free no : 1800-2700-479</li>
+                      <?php /*}*/?>
                   </ul>
             </div>
             <div class="col-sm-12">
@@ -154,7 +159,8 @@ foreach ($this->_data['whydt']['featurelist-right'] as $key => $value) {
               <h2>Sneak Peek</h2>
             </div>
             <div style="text-align: justify;">
-                <p>The eleventh issue of Dalal Times Magazine showcases an upcoming trend in Broking services with Nithin Kamath, Founder and CEO of Zerodha, in the spotlight. The cover story explores his journey and offers valuable insight to other brokers and broking firms. The magazine also carries sections like Gems In The Offing, Pink Stock, Make Or Break and Technically Speaking; segments that have earned us the title of ‘Most Preferred Stock Market Magazine In India’, by our readers.</p>
+                <p>The October issue of Dalal Times Magazine has put focus on an eminent personality in the Capital Markets; Mr Kapil Bali, CEO of YES Securities, a 100% subsidiary of YES Bank and his thoughts and understanding on how the markets have evolved and what can be expected from them. Also this month, take note of our other sections like How Good a Bet (Essel Propack), our elaborative feature in F Factor which talks about the latest participants in the Banking sector; namely the Payment Banks.</p>
+                <p>Also, monthly recommendations in Gems in the Offing and Pink Stock give your portfolio an overhaul to prepare for the longer run. So, subscribe now to get better returns on your investments.  </p>
               </div>
           </div>
         </div>
