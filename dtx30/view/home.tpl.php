@@ -131,79 +131,79 @@ if (!isset($_SESSION['_loggedIn'])) {
                   <tr class="odd">
                     <td>Asian Paints</td>
                     <td>FMCG</td>
-                    <td>1</td>
-                    <td>1</td>
+                    <td>1.1</td>
+                    <td>1.1</td>
                   </tr>
                   <tr class="even">
                     <td>Axis Bank</td>
                     <td>Banking</td>
-                    <td>1</td>
-                    <td>1.1</td>
+                    <td>1.2</td>
+                    <td>1.2</td>
                   </tr>
                   <tr class="odd">
                     <td>Bajaj Auto</td>
                     <td>Automobile</td>
                     <td>1</td>
-                    <td>0.9</td>
+                    <td>1.1</td>
                   </tr>
                   <tr class="even">
                     <td>Bharat Forging</td>
                     <td>Auto Ancillary</td>
-                    <td>1</td>
-                    <td>1.2</td>
+                    <td>1.1</td>
+                    <td>1.1</td>
                   </tr>
                   <tr class="odd">
                     <td>Castrol India</td>
                     <td>Oil/Variants</td>
-                    <td>1</td>
-                    <td>0.9</td>
+                    <td>0.8</td>
+                    <td>0.8</td>
                   </tr>
                   <tr class="even">
                     <td>CESC</td>
                     <td>Power</td>
-                    <td>1</td>
-                    <td>0.8</td>
+                    <td>0.7</td>
+                    <td>0.6</td>
                   </tr>
                   <tr class="odd">
                     <td>Cipla</td>
                     <td>Pharmaceuticals</td>
                     <td>1</td>
-                    <td>0.9</td>
+                    <td>1.1</td>
                   </tr>
                   <tr class="even">
                     <td>HCL Technologies</td>
                     <td>IT</td>
-                    <td>1</td>
-                    <td>1</td>
+                    <td>0.8</td>
+                    <td>0.8</td>
                   </tr>
                   <tr class="odd">
                     <td>HDFC Bank</td>
                     <td>Banking</td>
-                    <td>1</td>
-                    <td>1</td>
+                    <td>1.1</td>
+                    <td>1.2</td>
                   </tr>
                   <tr class="even">
                     <td>Hero MotoCorp</td>
                     <td>Automobile</td>
                     <td>1</td>
-                    <td>0.9</td>
+                    <td>0.8</td>
                   </tr>
                   <tr class="odd">
                     <td>Hindustan Unilever</td>
                     <td>FMCG</td>
-                    <td>1</td>
-                    <td>1</td>
+                    <td>1.1</td>
+                    <td>1.1</td>
                   </tr>
                   <tr class="even">
                     <td>HDFC</td>
                     <td>Finance</td>
                     <td>1</td>
-                    <td>1</td>
+                    <td>1.2</td>
                   </tr>
                   <tr class="odd">
                     <td>IndusInd Bank</td>
                     <td>Banking</td>
-                    <td>1</td>
+                    <td>1.1</td>
                     <td>1.1</td>
                   </tr>
                   <tr class="even">
@@ -215,7 +215,7 @@ if (!isset($_SESSION['_loggedIn'])) {
                   <tr class="odd">
                     <td>Larsen & Turbo</td>
                     <td>Engineering</td>
-                    <td>1</td>
+                    <td>1.1</td>
                     <td>1.1</td>
                   </tr>
                 </table>
@@ -232,91 +232,91 @@ if (!isset($_SESSION['_loggedIn'])) {
                     <td>Lupin</td>
                     <td>Pharmaceuticals</td>
                     <td>1</td>
-                    <td>1</td>
+                    <td>1.1</td>
                   </tr>
                   <tr class="even">
                     <td>Mahindra & Mahindra</td>
                     <td>Automobile</td>
                     <td>1</td>
-                    <td>1</td>
+                    <td>0.9</td>
                   </tr>
                   <tr class="odd">
                     <td>Maruti Suzuki India</td>
                     <td>Automobile</td>
-                    <td>1</td>
-                    <td>1</td>
+                    <td>1.1</td>
+                    <td>1.1</td>
                   </tr>
                   <tr class="even">
                     <td>Page Industires</td>
                     <td>Textile</td>
-                    <td>1</td>
-                    <td>1</td>
+                    <td>1.1</td>
+                    <td>1.1</td>
                   </tr>
                   <tr class="odd">
                     <td>Persistent Technologies</td>
                     <td>IT</td>
-                    <td>1</td>
-                    <td>0.9</td>
+                    <td>0.7</td>
+                    <td>0.7</td>
                   </tr>
                   <tr class="even">
                     <td>Pidellite Industries</td>
                     <td>FMCG</td>
-                    <td>1</td>
-                    <td>1</td>
+                    <td>1.1</td>
+                    <td>1.1</td>
                   </tr>
                   <tr class="odd">
                     <td>Repco Home Finance</td>
                     <td>Finance</td>
-                    <td>1</td>
-                    <td>1</td>
+                    <td>0.9</td>
+                    <td>0.8</td>
                   </tr>
                   <tr class="even">
                     <td>State Bank Of India</td>
                     <td>Banking</td>
                     <td>1</td>
-                    <td>1</td>
+                    <td>0.8</td>
                   </tr>
                   <tr class="odd">
                     <td>Stride Arcolab</td>
                     <td>Pharmaceuticals</td>
-                    <td>1</td>
-                    <td>1</td>
+                    <td>1.1</td>
+                    <td>1.1</td>
                   </tr>
                   <tr class="even">
                     <td>Sun Pharmaceuticals Industries</td>
                     <td>Pharmaceuticals</td>
                     <td>1</td>
-                    <td>1</td>
+                    <td>1.1</td>
                   </tr>
                   <tr class="odd">
                     <td>Tata Motors</td>
                     <td>Automobile</td>
-                    <td>1</td>
-                    <td>1</td>
+                    <td>0.9</td>
+                    <td>0.7</td>
                   </tr>
                   <tr class="even">
                     <td>Tech Mahindra</td>
                     <td>IT</td>
-                    <td>1</td>
-                    <td>0.9</td>
+                    <td>0.7</td>
+                    <td>0.7</td>
                   </tr>
                   <tr class="odd">
                     <td>UltraTech Cement</td>
                     <td>Cement</td>
-                    <td>1</td>
+                    <td>1.1</td>
                     <td>1.1</td>
                   </tr>
                   <tr class="even">
                     <td>VA Tech Wabag</td>
                     <td>Water Treatment</td>
-                    <td>1</td>
                     <td>1.1</td>
+                    <td>1.2</td>
                   </tr>
                   <tr class="odd">
                     <td>Wabco India</td>
                     <td>Auto Ancillary</td>
-                    <td>1</td>
                     <td>1.1</td>
+                    <td>1.2</td>
                   </tr>
                 </table>
             </div>
