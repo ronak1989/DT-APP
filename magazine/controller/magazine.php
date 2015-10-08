@@ -177,7 +177,7 @@ class magazine extends magazineModel {
 			                        <input type="submit" class="btn btn-block" id="signup" value="Sign Up">
 			                      </div>
                             <div class="form-group form-fields-width text-center">
-                              <em><strong>Sign-Up Now To Grab Your Free eMagazine</strong></em>
+                              <em><strong>Your Samvat copy will be delivered to you soon! Stay Tuned.</strong></em>
                             </div>
 			                    </div>
 			                  </form>
