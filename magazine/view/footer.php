@@ -464,7 +464,7 @@ if (empty($this->_data['load_js'])) {
       var load_js = <?php echo $this->_data['load_js'];?>;
       var show_loginpopup = <?php echo $this->_data['show_login'];?>;
     </script>
-    <script src="public/js/script.js"></script>
+    <script src="public/js/script.js?v1.1"></script>
     <script>
       $(document).ready(function() {
         //"use strict";
