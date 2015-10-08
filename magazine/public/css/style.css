@@ -365,7 +365,7 @@ h6 {
 */
 
 header {
-  display: none;
+  display: block;
   padding: 5px 0 5px;
   background-color: #fff;
   -webkit-box-shadow:0 0 9px -5px #000;
@@ -1044,7 +1044,7 @@ section.askdt {
   right: 0px;
   z-index: 2;
 }
-.carousel-inner > .item > img {
+.review .carousel-inner > .item > img {
   display: inline-block;
 }
 
@@ -1060,7 +1060,7 @@ section.askdt {
   -moz-box-shadow: 0 0 0px 20px rgba(32, 60, 69, 0.21);
 }
 
-.carousel-control {
+.review .carousel-control {
   width: 50px;
   height: 50px;
   top: 34%;
@@ -1739,7 +1739,7 @@ section.contact > .container {
   background:url(../images/ui_login.png) no-repeat left -51px;
 }*/
 
-.sticky_footer {
+#sticky_footer {
   height:61px;
   /*background: rgba(0, 0, 0, 0.75);*/
   display:none;
@@ -2249,3 +2249,75 @@ box-shadow: 0px -3px 8px 1px rgba(0,0,0,0.75);
 
 /*#static_menu{margin-left:-50px;}*/
 marquee {color:#FFFFFF;font-weight: 700;font-size: 1.2em;}
+
+#hp-rank {position:relative;}
+.carousel-control{width:4% !important}
+
+
+/** Testimonial **/
+#testimonial{
+  position:relative;
+}
+.testimonial {
+    margin: 0;
+    /*padding: 10px 50px;*/
+    position: relative;
+    font-family: Georgia, serif;
+    color: #FFFFFF;
+    border-radius: 5px;
+    font-style: italic;
+    text-shadow: 0 1px 0 #ECFBFF;
+}
+
+.testimonial:before, .testimonial:after {
+    content: "\201C";
+    position: absolute;
+    font-size: 30px;
+    line-height: 1;
+    color: #FFFFFF;
+    font-style: normal;
+}
+
+.testimonial:before {
+    top: 0;
+    left: 10px;
+}
+
+.testimonial:after {
+    content: "\201D";
+    right: 10px;
+    bottom: -0.5em;
+}
+
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #B7EDFF;
+    margin: 0 0 0 25px;
+}
+
+.testimonial-author {
+    margin: 0 0 0 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-align:left;
+}
+
+.testimonial-author span {
+    font-size: 13px;
+    color: #FFFFFF;
+}
+.textitem{display: none;padding: 20px; position: absolute;}
+.full-screen-cover {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.full-screen-contain {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}

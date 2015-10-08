@@ -116,8 +116,58 @@ class magazine extends magazineModel {
 			                          <input class="form-control validate" type="email" placeholder="Email-ID" name="regEmail" id="regEmail" required="required"  value="">
 			                      </div>
 			                      <div class="form-group form-fields-width">
-			                          <input type="text" class="form-control validate" placeholder="Mobile No (optional)" name="regMobileNo" id="regMobileNo" maxlength="10"  value="">
+			                          <input type="text" class="form-control validate" placeholder="Mobile No" name="regMobileNo" id="regMobileNo" maxlength="10" required="required"  value="">
 			                      </div>
+                            <div class="form-group form-fields-width">
+                                <textarea class="form-control btn-block validate" rows="3" name="regAddress" id="regAddress" placeholder="Kindly provide your address..."></textarea>
+                            </div>
+                            <div class="form-group form-fields-width">
+                                <select class="form-control validate" id="regState" name="regState">
+                                  <option value="">Select State</option>
+                                  <option value="AN">Andaman and Nicobar Islands</option>
+                                  <option value="AP">Andhra Pradesh</option>
+                                  <option value="AR">Arunachal Pradesh</option>
+                                  <option value="AS">Assam</option>
+                                  <option value="BR">Bihar</option>
+                                  <option value="CH">Chandigarh</option>
+                                  <option value="CT">Chhattisgarh</option>
+                                  <option value="DN">Dadra and Nagar Haveli</option>
+                                  <option value="DD">Daman and Diu</option>
+                                  <option value="DL">Delhi</option>
+                                  <option value="GA">Goa</option>
+                                  <option value="GJ">Gujarat</option>
+                                  <option value="HR">Haryana</option>
+                                  <option value="HP">Himachal Pradesh</option>
+                                  <option value="JK">Jammu and Kashmir</option>
+                                  <option value="JH">Jharkhand</option>
+                                  <option value="KA">Karnataka</option>
+                                  <option value="KL">Kerala</option>
+                                  <option value="LD">Lakshadweep</option>
+                                  <option value="MP">Madhya Pradesh</option>
+                                  <option value="MH">Maharashtra</option>
+                                  <option value="MN">Manipur</option>
+                                  <option value="ML">Meghalaya</option>
+                                  <option value="MZ">Mizoram</option>
+                                  <option value="NL">Nagaland</option>
+                                  <option value="OR">Odisha</option>
+                                  <option value="PY">Puducherry</option>
+                                  <option value="PB">Punjab</option>
+                                  <option value="RJ">Rajasthan</option>
+                                  <option value="SK">Sikkim</option>
+                                  <option value="TN">Tamil Nadu</option>
+                                  <option value="TG">Telangana</option>
+                                  <option value="TR">Tripura</option>
+                                  <option value="UT">Uttar Pradesh</option>
+                                  <option value="UP">Uttarakhand</option>
+                                  <option value="WB">West Bengal</option>
+                                </select>
+                            </div>
+                            <div class="form-group form-fields-width">
+                                <input type="text" class="form-control validate" placeholder="City" id="regCity" name="regCity" required="required">
+                            </div>
+                            <div class="form-group form-fields-width">
+                                <input type="text" class="form-control validate" name="regZip" id="regZip" placeholder="Pincode" maxlength="16" required="required">
+                            </div>
                             <div class="form-group form-fields-width">
                               <div class="checkbox" id="term_condition_container" style="color:#000000;" onclick="removeErrorMsg(this);">
                                 <label><input type="checkbox" class="validate" value="yes" name="t_c" id="t_c" checked>I agree to the <a data-toggle="modal" href="#tc-pg">Terms & Conditions</a></label>
@@ -487,7 +537,7 @@ class magazine extends magazineModel {
                                 <input class="form-control validate" type="email" placeholder="Email-ID" name="regEmail" id="regEmail" required="required"  value="">
                             </div>
                             <div class="form-group form-fields-width">
-                                <input type="text" class="form-control validate" placeholder="Mobile No (optional)" name="regMobileNo" id="regMobileNo" maxlength="10"  value="">
+                                <input type="text" class="form-control validate" placeholder="Mobile No" name="regMobileNo" id="regMobileNo" maxlength="10"  value="">
                             </div>
                             <div class="form-group form-fields-width">
                               <div class="checkbox" style="color:#000000;">

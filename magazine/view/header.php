@@ -1,5 +1,5 @@
 <?php
-	$menu = $this->_data['show_header_menu'] != '' ? $this->_data['show_header_menu'] : 'navbar-fixed-top';
+$menu = $this->_data['show_header_menu'] != '' ? $this->_data['show_header_menu'] : 'navbar-fixed-top';
 ?>
     <!-- Preloader -->
 
@@ -46,9 +46,10 @@
                   <li><a href="<?php echo _CONST_WEB_URL;?>#why_dt_sub">Why Subscribe</a></li>
                   <li><a href="<?php echo _CONST_WEB_URL;?>#sneak_preview_sub">Sneak Peek</a></li>
                   <li><a href="<?php echo _CONST_WEB_URL;?>#registration_sub">Subscribe</a></li>
-		 <?php if($_SESSION['_loggedIn']==1){?>
+		 <?php if ($_SESSION['_loggedIn'] == 1) {?>
                   <li><a href="<?php echo _CONST_WEB_URL;?>#emagazine" style="text-transform:unset !important">eMagazine</a></li>
-		<?php } ?>
+		<?php }
+?>
                   <li><a href="<?php echo _CONST_WEB_URL;?>#ask_dt">Ask DT</a></li>
                 </ul>
               </div><!-- /.navbar-collapse -->
