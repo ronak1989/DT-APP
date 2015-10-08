@@ -454,6 +454,7 @@
     <script src="public/js/jquery.ui.position.min.js"></script>
     <script src="public/js/jquery.ui.menu.min.js"></script>
     <script src="public/js/jquery.ui.autocomplete.min.js"></script>
+
    <?php
 if (empty($this->_data['load_js'])) {
 	$this->_data['load_js'] = 0;

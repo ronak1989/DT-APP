@@ -12,6 +12,10 @@ class magazineModel extends Database {
 	private $_userInputPwd = NULL;
 	private $_userInputEmail = NULL;
 	private $_userInputMobileNo = NULL;
+	private $_userInputAddress = NULL;
+	private $_userInputState = NULL;
+	private $_userInputCity = NULL;
+	private $_userInputPincode = NULL;
 	private $_pkgId = NULL;
 	private $_orderby = NULL;
 	private $_whereCondition = NULL;
@@ -49,6 +53,21 @@ class magazineModel extends Database {
 
 		if (isset($_postParams['regName'])) {
 			$this->_userInputName = $_postParams['regName'];
+		}
+
+		if (isset($_postParams['regAddress'])) {
+			$this->_userInputAddress = $_postParams['regAddress'];
+		}
+
+		if (isset($_postParams['regState'])) {
+			$this->_userInputState = $_postParams['regState'];
+		}
+
+		if (isset($_postParams['regCity'])) {
+			$this->_userInputCity = $_postParams['regCity'];
+		}
+		if (isset($_postParams['regZip'])) {
+			$this->_userInputPincode = $_postParams['regZip'];
 		}
 
 		if (isset($_postParams['chngNewPassword'])) {
@@ -494,13 +513,17 @@ class magazineModel extends Database {
 
 	private function saveUser() {
 		$_generatedPassword = $this->generatePassword();
-		$this->_modelQuery = 'INSERT INTO users(`user_id`,`password`,`name`,`emailid`,`mobileno`,`registered_from`) VALUES(:user_id,:password,:name,:emailid,:mobileno,:registered_from)';
+		$this->_modelQuery = 'INSERT INTO users(`user_id`,`password`,`name`,`emailid`,`mobileno`,`address`,`pincode`,`city`,`state`,`registered_from`) VALUES(:user_id,:password,:name,:emailid,:mobileno,:address,:pincode,:city,:state,:registered_from)';
 		$this->query($this->_modelQuery);
 		$this->bindByValue('user_id', $this->_userInputEmail);
 		$this->bindByValue('emailid', $this->_userInputEmail);
 		$this->bindByValue('password', password_hash($_generatedPassword, PASSWORD_BCRYPT));
 		$this->bindByValue('name', $this->_userInputName);
 		$this->bindByValue('mobileno', $this->_userInputMobileNo);
+		$this->bindByValue('address', $this->_userInputAddress);
+		$this->bindByValue('pincode', $this->_userInputPincode);
+		$this->bindByValue('city', $this->_userInputCity);
+		$this->bindByValue('state', $this->_userInputState);
 		$this->bindByValue('registered_from', '6');
 		if ($this->execute()) {
 			$this->sendRegistrationMailer($_generatedPassword);
@@ -837,7 +860,7 @@ class magazineModel extends Database {
 	protected function getAboutSection() {
 		return array('img' => 'public/images/magazine_cover.jpg', 'content' => '<p>Dalal Times Magazine, a monthly publication, takes into account events, news and views of an entire month and helps translate them in to its impact on the share market.</p>
           <p>We leverage this form of media to reach out to our readers who not only constitute of investors and traders but also keen individuals who desire to benefit from our teams research and analytics expertise in equity market.</p>
-          <p>Our aim is to keep you ahead of the market fluctuations and stay true to the magazine’s motto ‘Voice Of The Indian Stock Market’.</p>', );
+          <p>Our aim is to keep you ahead of the market fluctuations and stay true to the magazine’s motto ‘Voice Of The Indian Stock Market’.</p>');
 	}
 
 	protected function getWhyDtSection() {

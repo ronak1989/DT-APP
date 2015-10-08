@@ -20,7 +20,11 @@
 }
 @media only screen and (max-width: 768px) {
  /*#static_menu{margin-left:-50px;}*/
-
+ .testimonial{font-size: 15px;}
+ .testimonial-author span {
+    font-size: 13px;
+    color: #FFFFFF;
+}
   #loggedin-section{padding-right: 40px;}
   .baraja-container {
     width: 180px;
@@ -488,11 +492,11 @@ height:50px;
 }
 
 .MT80{margin-top:30px;}
-.dt-logo img{ 
+.dt-logo img{
 height:50px;
 width:70px;
 }
-.dtm-logo img{ 
+.dtm-logo img{
 width:160px;
 height:50px;
 }

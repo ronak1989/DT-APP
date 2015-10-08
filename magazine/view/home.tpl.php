@@ -11,64 +11,89 @@ require_once _CONST_VIEW_PATH . 'header.php';
 ?>
 
     <!-- banner start -->
-    <section id="banner" class="banner norm-img">
-      <div class="trans-bg">
-        <div class="container-fluid">
-          <div class="row">
-            <div>
-              <div class="text-slider slider">
-                  <ul class="slides">
-                    <?php /*if ($_SESSION['_loggedIn'] == 1) {*/?>
-                    <!--  <li>For more information please call our toll free no : 1800-2700-479</li>
-                     <li style="color:#FBDA00">For more information please call our toll free no : 1800-2700-479</li> -->
-                     <?php /*} else {*/?>
-                     <li>For more information please call our toll free no : 1800-2700-479</li>
-                     <li style="color:#FBDA00">For more information please call our toll free no : 1800-2700-479</li>
-                      <?php /*}*/?>
-                  </ul>
-            </div>
-            <div class="col-sm-12">
-
-              <h2><a href="" class="dt-logo"><img src="public/images/dtlogo_white.png"></a></h2> <!-- .lg-logo -->
-              <h2 class="MT80"><a href="" class="dtm-logo"><img src="public/images/magazinelogo_white.png"></a></h2> <!-- .lg-logo -->
-                 <!-- Text slider start here -->
-              <!-- Text slider start here -->
-                 <div class="flex_text text-slider">
-                  <ul class="slides">
-                      <li>Best-selling Indian stock market magazine in the market</li>
-                      <li>Gain key insights from our team of researchers and analysts</li>
-                      <li>Don’t just read news or views, gain from their impact on the market</li>
-                  </ul>
+    <section id="banner" >
+          <div class="col-sm-12" style="padding:0px;">
+              <div id="hp">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 " style="padding: 0px">
+                  <?php if ($_SESSION['_loggedIn'] == 1) {?>
+                  <div class="col-xs-12" id="samvat" style="background-image: url('public/images/samvat.jpg');background-size: contain;background-repeat: no-repeat;background-position: center center;background-color: #4E4E50;">
+                  <?php } else {?>
+                  <div class="col-xs-12" id="samvat" style="background-image: url('public/images/samvat.jpg');background-size: contain;background-repeat: no-repeat;background-position: center center;background-color: #4E4E50;cursor: pointer" onclick="load_popup(1)">
+                  <?php }
+?>
+                  </div>
+                  <div class="col-xs-12 " style="background-color: #000000"  id="testimonial">
+                    <div>
+                      <h3 style="font-size:15px">Client Testimonial</h3>
+                    </div>
+                    <div class="textitem">
+                      <blockquote class="testimonial" >
+                        <p>Congratulations for bringing out an excellent publication catering to the ever changing financial markets! All the best for a strong readership.</p>
+                      </blockquote>
+                      <p class="testimonial-author">Saurabh S Dhanorkar</p>
+                    </div>
+                    <div class="textitem">
+                      <blockquote class="testimonial">
+                        <p>Dalal Times Magazine gives wide coverage of fundamental and technical analysis, recommendations of large and midcap stocks, corporate data bank, mutual funds etc.. We hope it will be one of the leading investment magazine of our country.</p>
+                      </blockquote>
+                      <p class="testimonial-author">S. M. Potdar </p>
+                    </div>
+                    <div class="textitem">
+                      <blockquote class="testimonial">
+                        <p>Dalal Times Magazine looks really promising. Indian traders finally get a great stock market media house. I hope DT continues to focus on capital market news only, rather than become a second Economic Times.</p>
+                      </blockquote>
+                      <p class="testimonial-author">Anurag Bhatia </p>
+                    </div>
+                    <div class="textitem">
+                      <blockquote class="testimonial">
+                        <p>Congratulations for bringing out an excellent publication catering to the ever changing financial markets! All the best for a strong readership.</p>
+                      </blockquote>
+                      <p class="testimonial-author">Saurabh S Dhanorkar</p>
+                    </div>
+                  </div>
                 </div>
-                <!--/.text-slider end-->
-                <!--/.text-slider end-->
-                  <!-- <div class="download-block text-center"> -->
-                    <!-- <a href="#about_dt" class="btn-download">About DT</a>
-                    <a href="#why_dt" class="btn-download">Why DT</a>
-                    <a href="#sneak_preview" class="btn-download">Sneak Preview</a>
-                    <a href="#registration" class="btn-download">Subscribe</a>
-                    <a href="" class="btn-download">Ask DT</a> -->
-                  <!-- </div> -->
-                  <ul class="download-block text-center">
-                   <li><a href="#about_dt" class="btn-download">About Magazine</a></li>
-                   <li><a href="#why_dt" class="btn-download">Why Subscribe</a></li>
-                   <li><a href="#sneak_preview_sub" class="btn-download">Sneak Peek</a></li>
-                   <li><a href="#registration" class="btn-download">Subscribe</a></li>
-		  <?php if ($_SESSION['_loggedIn'] == 1) {?>
-                   <li><a href="#emagazine" class="btn-download">eMagazine</a></li>
-		 <?php }
-?>
-                   <li><a href="#ask_dt" class="btn-download">Ask DT</a></li>
-<?php if ($_SESSION['_loggedIn'] != 1) {?>
-                   <li><a class="btn-download" onclick="load_popup(1);" href="javascript:void(0);" style="background:#FBDA00;color:#000000">Free Trial Subscription</a></li>
-     <?php }
-?>
-                  </ul>
-                 <!-- </div> -->
-            </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" style="padding: 0px">
+                      <div id="mycarousel" class="carousel-hp carousel slide" data-ride="carousel">
+                        <!-- Wrapper for slides -->
+                        <div id="hp-rank" class="carousel-inner" role="listbox">
+                          <div class="item active" >
+                            <img src="public/images/im1.jpg" data-color="black" alt="First Image">
+                            <!-- <div class="rank-article">
+                              <span class="article-category">Cover Story</span>
+                              <h3>How airlines are managing the labyrinth of aviation risk</h3>
+                            </div> -->
+                          </div>
+                          <div class="item" >
+                            <img src="public/images/im2.jpg" data-color="black" alt="Second Image">
+                            <!-- <div class="rank-article">
+                              <span class="article-category">Cover Story</span>
+                              <h3>How airlines are managing the labyrinth of aviation risk</h3>
+                            </div> -->
+                          </div>
+                          <div class="item" >
+                            <img src="public/images/im3.jpg" data-color="black" alt="Third Image">
+                            <!-- <div class="rank-article">
+                              <span class="article-category">Cover Story</span>
+                              <h3>How airlines are managing the labyrinth of aviation risk</h3>
+                            </div> -->
+                          </div>
+                        </div>
+
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#mycarousel" role="button" data-slide="prev">
+                          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#mycarousel" role="button" data-slide="next">
+                          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </div>
+                </div>
+                <div style="clear:both"></div>
+              </div>
           </div>
-        </div>
-      </div> <!-- /.trans-bg -->
+          <div style="clear:both"></div>
     </section>
     <!-- banner end -->
 
