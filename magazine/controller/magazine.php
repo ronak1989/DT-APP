@@ -18,8 +18,13 @@ class magazine extends magazineModel {
 	}
 
 	public function getHomePage() {
+		$this->_data['pu'] = 0;
 		if ($_SESSION['_loggedIn'] == 1) {
-
+			if (base64_decode($_SESSION['_profile_updated']) == 1) {
+				$this->_data['pu'] = 0;
+			} else {
+				$this->_data['pu'] = 1;
+			}
 			$this->_data['show_login'] = 0;
 			$this->_data['header_text'] = '<div style="display:inline-block;vertical-align: bottom; padding-right:10px;">';
 			$this->_data['header_text'] .= '<div class="loggedin-name">Welcome <strong>' . base64_decode($_SESSION['_name']) . '</strong></div>';

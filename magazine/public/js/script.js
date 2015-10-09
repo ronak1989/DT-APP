@@ -29,6 +29,10 @@ $(window).load(function() {
         if(window.location.hash=='#emagazine')
           window.setTimeout(custom_scroll(window.location.hash,'-',30), 500);
       }
+    }else{
+      if(show_updateprofile==1){
+        load_popup(1);
+      }
     }
 
     $('.carousel-hp').carousel({

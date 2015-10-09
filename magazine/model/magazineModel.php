@@ -438,7 +438,7 @@ class magazineModel extends Database {
 
 	private function loadUserSession($user_id, $password) {
 		$this->_whereCondition = NULL;
-		$this->_modelQuery = "SELECT uid, name, password, emailid FROM users WHERE user_id=:user_id";
+		$this->_modelQuery = "SELECT uid, name, password, emailid,profile_updated FROM users WHERE user_id=:user_id";
 		$this->query($this->_modelQuery);
 		$this->bindByValue('user_id', $user_id);
 		$this->_queryResult = $this->single();
@@ -447,6 +447,7 @@ class magazineModel extends Database {
 			$_SESSION['_uid'] = base64_encode($this->_queryResult['uid']);
 			$_SESSION['_name'] = base64_encode($this->_queryResult['name']);
 			$_SESSION['_emailid'] = base64_encode($this->_queryResult['emailid']);
+			$_SESSION['_profile_updated'] = base64_encode($this->_queryResult['profile_updated']);
 		}
 	}
 
@@ -513,7 +514,7 @@ class magazineModel extends Database {
 
 	private function updateUserProfile($updateBy = 'uid') {
 		if ($updateBy == 'uid') {
-			$this->_modelQuery = 'UPDATE users set `mobileno`=:mobileno,`address`=:address,`pincode`=:pincode,`city`=:city,`state`=:state where uid=:uid';
+			$this->_modelQuery = 'UPDATE users set `mobileno`=:mobileno,`address`=:address,`pincode`=:pincode,`city`=:city,`state`=:state, `profile_updated`=1 where uid=:uid';
 			$this->query($this->_modelQuery);
 			$this->bindByValue('uid', base64_decode($_SESSION['_uid']));
 			$this->bindByValue('mobileno', $this->_userInputMobileNo);
