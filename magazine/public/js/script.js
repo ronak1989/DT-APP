@@ -534,6 +534,7 @@ $(document).ready(function() {
                 //window.location.reload();
                 $(".updateprofile-success").html( '<div class="alert alert-success"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> Your Profile has been updated Successfully</div>' );
               $(".updateprofile-success").show();
+              $('#samvat').prop('onclick',null).off('click');
               }
               $("#"+clicked_id).prop('disabled', false);
             },
