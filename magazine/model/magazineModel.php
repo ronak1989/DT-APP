@@ -511,6 +511,24 @@ class magazineModel extends Database {
 		}
 	}
 
+	private function updateUserProfile($updateBy = 'uid') {
+		if ($updateBy == 'uid') {
+			$this->_modelQuery = 'UPDATE users set `mobileno`=:mobileno,`address`=:address,`pincode`=:pincode,`city`=:city,`state`=:state where uid=:uid';
+			$this->query($this->_modelQuery);
+			$this->bindByValue('uid', base64_decode($_SESSION['_uid']));
+			$this->bindByValue('mobileno', $this->_userInputMobileNo);
+			$this->bindByValue('address', $this->_userInputAddress);
+			$this->bindByValue('pincode', $this->_userInputPincode);
+			$this->bindByValue('city', $this->_userInputCity);
+			$this->bindByValue('state', $this->_userInputState);
+			if ($this->execute()) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+	}
+
 	private function saveUser() {
 		$_generatedPassword = $this->generatePassword();
 		$this->_modelQuery = 'INSERT INTO users(`user_id`,`password`,`name`,`emailid`,`mobileno`,`address`,`pincode`,`city`,`state`,`registered_from`) VALUES(:user_id,:password,:name,:emailid,:mobileno,:address,:pincode,:city,:state,:registered_from)';
@@ -1075,6 +1093,19 @@ class magazineModel extends Database {
 				} else {
 					echo json_encode(array('error' => 'orig-mismatch'));
 				}
+			}
+		}
+	}
+
+	protected function updateProfileUser() {
+		$this->_details = array();
+		if (!isset($_SESSION['_loggedIn'])) {
+			echo json_encode(array('error' => 'generic'));
+		} else {
+			if ($this->updateUserProfile('uid') == true) {
+				echo json_encode(array('data' => 'success'));
+			} else {
+				echo json_encode(array('error' => 'generic'));
 			}
 		}
 	}

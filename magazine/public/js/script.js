@@ -402,7 +402,7 @@ $(document).ready(function() {
       }
     }
   );
-  $(document).on('click',"#forgotpassword, #changepassword, #register, #login, #subscribeorder, #signin, #signup, #askdt",function(e) {
+  $(document).on('click',"#forgotpassword, #changepassword, #register, #login, #subscribeorder, #signin, #signup, #askdt, #updateprofile",function(e) {
     e.preventDefault();
     e.stopPropagation();
     var error = 0;
@@ -470,7 +470,76 @@ $(document).ready(function() {
           }
         });
       }
-    }if(this.id=='signup'){
+    }else if(this.id=='updateprofile'){
+
+        $("#updateprofile-form .validate").each(function(){
+          var input_val = $(this).val();
+          if(input_val == '' && $(this).attr('name')!='regState'){
+            addErrorMsg($(this),'Cannot be blank');
+            error++;
+            return;
+          }
+          if($(this).attr('name')=='regState'){
+            if($( "#regState" ).val()==''){
+               addErrorMsg($(this),'Please select State');
+               error++;
+            }
+          }else if($(this).attr('name')=='regZip'){
+            if(input_val.length != 0 && validateMobile(input_val)==false){
+              addErrorMsg($(this),'Invalid pincode');
+              error++;
+              return;
+            }
+          }else if($(this).attr('name')=='regMobileNo'){
+            if(input_val.length != 0 && validateMobile(input_val)==false || (input_val.length > 0 && input_val.length <10)){
+              addErrorMsg($(this),'Invalid mobile no');
+              error++;
+              return;
+            }
+          }else{
+            switch($(this).attr('type')){
+              case "email":
+                if(validateEmail(input_val)==false){
+                  addErrorMsg($(this),'Invalid Email-ID');
+                  error++;
+                }
+                break;
+              default:
+                if(validateAlphanumeric(input_val)==false){
+                  addErrorMsg($(this),'Cannot have special characters');
+                  error++;
+                }
+                break;
+            }
+          }
+        });
+        if(error==0){
+          $(".updateprofile-success").hide();
+          $(".updateprofile-error").hide();
+          $("#"+clicked_id).prop('disabled', true);
+          $.ajax({
+            url: 'updateprofile',
+            dataType: 'json',
+            type: 'post',
+            data: $('#updateprofile-form').serialize(),
+            success: function( response, textStatus, jQxhr ){
+              if(response['error']=='generic'){
+                $(".updateprofile-error").html('<div class="alert alert-danger"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> Something went wrong. Please try again!!</div>');
+                $(".updateprofile-error").show();
+              }else if(response['data']=='success'){
+                //window.location.reload();
+                $(".updateprofile-success").html( '<div class="alert alert-success"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> Your Profile has been updated Successfully</div>' );
+              $(".updateprofile-success").show();
+              }
+              $("#"+clicked_id).prop('disabled', false);
+            },
+            error: function( jqXhr, textStatus, errorThrown ){
+              $("#"+clicked_id).prop('disabled', false);
+            }
+          });
+        }
+
+    }else if(this.id=='signup'){
       $("#signup-form .validate").each(function(){
         var input_val = $(this).val();
         if(input_val == '' && $(this).attr('name')!='regState'){

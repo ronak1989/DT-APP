@@ -1374,13 +1374,13 @@ section.contact > .container {
      -moz-box-shadow: 0px 0px 0px 20px rgba(255, 255, 255,0.75);
           box-shadow: 0px 0px 0px 20px rgba(255, 255, 255,0.75);
 }
-.contact-success, .register-success, .login-success, .signin-success, .signup-success, .forgotpassword-success, .changepassword-success, .askdt-success {
+.contact-success, .register-success, .login-success, .signin-success, .signup-success, .forgotpassword-success, .changepassword-success, .askdt-success, .updateprofile-success {
   margin-top: 5px;
   font-size: 12px !important;
   display: none;
 }
 
-.contact-error, .register-error, .login-error, .signin-error, .signup-error, .forgotpassword-error, .changepassword-error, .askdt-error {
+.contact-error, .register-error, .login-error, .signin-error, .signup-error, .forgotpassword-error, .changepassword-error, .askdt-error, .updateprofile-error {
   margin-top: 5px;
   font-size: 12px !important;
   display: none;

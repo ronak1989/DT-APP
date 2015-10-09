@@ -29,7 +29,8 @@ class magazine extends magazineModel {
 			$this->_data['header_text'] .= '<img src="public/images/settings.png" width="20px" height="20px;">';
 			$this->_data['header_text'] .= '</div>';
 			$this->_data['header_text'] .= '</div>';
-			$this->_data['settingsNav'] = '<li class="active"><a href="#change-password" role="tab" data-toggle="tab">Change Password</a></li>';
+			$this->_data['settingsNav'] = '<li class="active"><a href="#change-password" role="tab" data-toggle="tab">Change Password</a></li>
+                                     <li><a href="#update-profile" role="tab" data-toggle="tab">Update Profile</a></li>';
 			$this->_data['settingsTab'] = '<div class="tab-pane active" id="change-password">
                     <div class="row">
                       <div class="col-sm-12">
@@ -52,6 +53,81 @@ class magazine extends magazineModel {
                             </div>
                             <div class="form-group form-fields-width">
                               <input type="submit" class="btn btn-block" id="changepassword" value="Change Password">
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane" id="update-profile">
+                    <div class="row">
+                      <div class="col-sm-12 ">
+                        <form class="form-horizontal" name="updateprofile-form" id="updateprofile-form" role="form" action="redirect" method="POST">
+                          <div class="col-sm-12">
+                            <div class="form-group form-fields-width">
+                              <div class="updateprofile-success"><div class="alert alert-success"></div></div>
+                              <div class="updateprofile-error"><div class="alert alert-error"></div></div>
+                            </div>
+                          </div>
+                          <div class="col-sm-12">
+                            <div class="form-group form-fields-width">
+                                <input type="text" class="form-control validate" placeholder="Mobile No" name="regMobileNo" id="regMobileNo" maxlength="10" required="required"  value="">
+                            </div>
+                            <div class="form-group form-fields-width">
+                                <textarea class="form-control btn-block validate" rows="3" name="regAddress" id="regAddress" placeholder="Kindly provide your address..."></textarea>
+                            </div>
+                            <div class="form-group form-fields-width">
+                                <select class="form-control validate" id="regState" name="regState">
+                                  <option value="">Select State</option>
+                                  <option value="AN">Andaman and Nicobar Islands</option>
+                                  <option value="AP">Andhra Pradesh</option>
+                                  <option value="AR">Arunachal Pradesh</option>
+                                  <option value="AS">Assam</option>
+                                  <option value="BR">Bihar</option>
+                                  <option value="CH">Chandigarh</option>
+                                  <option value="CT">Chhattisgarh</option>
+                                  <option value="DN">Dadra and Nagar Haveli</option>
+                                  <option value="DD">Daman and Diu</option>
+                                  <option value="DL">Delhi</option>
+                                  <option value="GA">Goa</option>
+                                  <option value="GJ">Gujarat</option>
+                                  <option value="HR">Haryana</option>
+                                  <option value="HP">Himachal Pradesh</option>
+                                  <option value="JK">Jammu and Kashmir</option>
+                                  <option value="JH">Jharkhand</option>
+                                  <option value="KA">Karnataka</option>
+                                  <option value="KL">Kerala</option>
+                                  <option value="LD">Lakshadweep</option>
+                                  <option value="MP">Madhya Pradesh</option>
+                                  <option value="MH">Maharashtra</option>
+                                  <option value="MN">Manipur</option>
+                                  <option value="ML">Meghalaya</option>
+                                  <option value="MZ">Mizoram</option>
+                                  <option value="NL">Nagaland</option>
+                                  <option value="OR">Odisha</option>
+                                  <option value="PY">Puducherry</option>
+                                  <option value="PB">Punjab</option>
+                                  <option value="RJ">Rajasthan</option>
+                                  <option value="SK">Sikkim</option>
+                                  <option value="TN">Tamil Nadu</option>
+                                  <option value="TG">Telangana</option>
+                                  <option value="TR">Tripura</option>
+                                  <option value="UT">Uttar Pradesh</option>
+                                  <option value="UP">Uttarakhand</option>
+                                  <option value="WB">West Bengal</option>
+                                </select>
+                            </div>
+                            <div class="form-group form-fields-width">
+                                <input type="text" class="form-control validate" placeholder="City" id="regCity" name="regCity" required="required">
+                            </div>
+                            <div class="form-group form-fields-width">
+                                <input type="text" class="form-control validate" name="regZip" id="regZip" placeholder="Pincode" maxlength="16" required="required">
+                            </div>
+                            <div class="form-group form-fields-width">
+                              <input type="submit" class="btn btn-block" id="updateprofile" value="Update Profile">
+                            </div>
+                            <div class="form-group form-fields-width text-center">
+                              <em><strong>Your Samvat copy will be delivered to you soon! Stay Tuned.</strong></em>
                             </div>
                           </div>
                         </form>
@@ -237,6 +313,10 @@ class magazine extends magazineModel {
 
 	public function signup() {
 		$this->_magazineModel->registerUser();
+		/*echo json_encode($this->_data);*/
+	}
+	public function updateProfile() {
+		$this->_magazineModel->updateProfileUser();
 		/*echo json_encode($this->_data);*/
 	}
 
