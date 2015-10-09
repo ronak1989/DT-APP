@@ -16,6 +16,7 @@ $_router->map('POST', '/verify', 'magazine#doVerification');
 $_router->map('POST', '/register', 'magazine#register');
 $_router->map('POST', '/login', 'magazine#login');
 $_router->map('POST', '/signup', 'magazine#register');
+$_router->map('POST', '/updateprofile', 'magazine#updateProfile');
 $_router->map('POST', '/signin', 'magazine#login');
 $_router->map('POST', '/change-password', 'magazine#changePassword');
 $_router->map('POST', '/forgot-password', 'magazine#forgotPassword');

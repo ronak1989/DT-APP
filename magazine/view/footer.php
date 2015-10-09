@@ -463,6 +463,7 @@ if (empty($this->_data['load_js'])) {
     <script>
       var load_js = <?php echo $this->_data['load_js'];?>;
       var show_loginpopup = <?php echo $this->_data['show_login'];?>;
+      var show_updateprofile = <?php echo $this->_data['pu'];?>;
     </script>
     <script src="public/js/script.js?v1.1"></script>
     <script>

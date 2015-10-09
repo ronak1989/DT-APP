@@ -16,7 +16,7 @@ require_once _CONST_VIEW_PATH . 'header.php';
               <div id="hp">
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 " style="padding: 0px">
                   <?php if ($_SESSION['_loggedIn'] == 1) {?>
-                  <div class="col-xs-12" id="samvat" style="background-image: url('public/images/samvat.jpg');background-size: contain;background-repeat: no-repeat;background-position: center center;background-color: #4E4E50;">
+                  <div class="col-xs-12" id="samvat" style="background-image: url('public/images/samvat_signin.jpg');background-size: contain;background-repeat: no-repeat;background-position: center center;background-color: #4E4E50;" onclick="load_popup(1)">
                   <?php } else {?>
                   <div class="col-xs-12" id="samvat" style="background-image: url('public/images/samvat.jpg');background-size: contain;background-repeat: no-repeat;background-position: center center;background-color: #4E4E50;cursor: pointer" onclick="load_popup(1)">
                   <?php }
