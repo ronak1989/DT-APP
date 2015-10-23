@@ -397,7 +397,7 @@ require_once _CONST_VIEW_PATH . 'header.php';
                 </div>
 		<div class="col-md-12">
 			<p>For any assistance, please get in touch with Customer Care Support at our toll free number <strong>1800-2700-479</strong>.</p>
-			<p>For Press Releases & Media Enquiries, Write To <a href="mailto:sonal.mehta@dalaltimes.com">sonal.mehta@dalaltimes.com</a></p>
+			<p>For Press Releases & Media Enquiries, Write To <a href="mailto:soumi@dalaltimes.com">soumi@dalaltimes.com</a></p>
 		</div>
               </div>
               <div class="clear"></div>
@@ -669,15 +669,7 @@ require_once _CONST_VIEW_PATH . 'header.php';
                   </div>
                   <div class="clear"></div>
                 </div>
-                <div>
-                  <div>
-                    <p><em>"Dalal Times is a great place for young and creative minds to unite as a team, apply their skills and knowledge, and see their talent grow. My journey so far has been nothing short of enriching, with opportunities and challenges that has taken my learning graph to another level."</em></p>
-                  </div>
-                  <div class="pull-right">
-                    <p>Sonal Mehta, Team Marketing</p>
-                  </div>
-                  <div class="clear"></div>
-                </div>
+
               <!-- /Awards -->
               <div class="clear"></div>
             </div>

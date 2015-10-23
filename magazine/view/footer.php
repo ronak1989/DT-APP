@@ -64,7 +64,7 @@
           </div>
         </div>
         <p>For any service related assistance, please get in touch with Customer Care Support at our toll free number <strong>1800-2700-479</strong></p>
-        <p>For Press Releases & Media Enquiries, Write To <a href="mailto:sonal.mehta@dalaltimes.com">sonal.mehta@dalaltimes.com</a></p>
+        <p>For Press Releases & Media Enquiries, Write To <a href="mailto:vijay.raghavan@dalaltimes.com">vijay.raghavan@dalaltimes.com</a></p>
       </div>
     </div>
   </div>
