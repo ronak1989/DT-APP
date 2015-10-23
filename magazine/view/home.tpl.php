@@ -188,7 +188,7 @@ foreach ($this->_data['whydt']['featurelist-right'] as $key => $value) {
               <h2>Sneak Peek</h2>
             </div>
             <div style="text-align: justify;">
-                <p>The October issue of Dalal Times Magazine discusses long-term investment mantra with Kapil Bali, ED and CEO of YES Securities, a 100% subsidiary of YES Bank. The twelfth issue of the magazine also brings to you reader-favourite segments like How Good A Bet, Gems In The Offing, Make Or Break et al. for investors to make better and informed portfolio decisions. Subscribe and read stock recommendations and suggestions that hold ground even in the present turbulent phase of the market. </p>
+                <p>The November issue of Dalal Times Magazine highlights the power that the Indian investors have with Nirmal Jain, Founder & Chairman, IIFL Holdings. The first issue (Vol. II) of the magazine also brings to you reader-favourite segments like How Good A Bet, Gems In The Offing, Make or Break et al for investors to make better and informed portfolio decisions. Subscribe and read stock recommendations and suggestions that hold ground even in the present turbulent phase of the market.</p>
               </div>
           </div>
         </div>
