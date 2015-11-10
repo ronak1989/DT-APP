@@ -34,6 +34,7 @@
     <link rel="stylesheet" href="public/css/jquery.ui.theme.min.css">
     <link rel="stylesheet" href="public/css/jquery.ui.menu.min.css">
     <link rel="stylesheet" href="public/css/jquery.ui.autocomplete.min.css">
+    <link rel="stylesheet" href="public/css/liquidcarousel.css">
 
     <!-- Added google font -->
     <link href='http://fonts.googleapis.com/css?family=Dosis:400,600,700,800' rel='stylesheet' type='text/css'>

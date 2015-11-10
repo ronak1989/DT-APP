@@ -32,6 +32,7 @@ $_router->map('GET', '/payment-error', 'magazine#gatewayResponseError');
 
 $_router->map('GET', '/sneak-preview/[a:issue]', 'magazine#showPartialBook');
 $_router->map('GET', '/magazine/[a:issue]', 'magazine#showSubscribedBook');
+$_router->map('GET', '/samvat/[a:issue]', 'magazine#showSpecialIssue');
 $_router->map('GET', '/view/document', 'magazine#showDocument');
 
 $controller_name = null;

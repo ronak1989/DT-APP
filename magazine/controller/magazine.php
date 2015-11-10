@@ -683,5 +683,12 @@ class magazine extends magazineModel {
 			require_once _CONST_VIEW_PATH . $this->_issue . '/index.php';
 		}
 	}
+
+	public function showSpecialIssue() {
+		$this->_data['result'] = $this->_magazineModel->checkSamvatSpecialIssueValidity($this->_issue);
+		if ($this->_data['result'] == true) {
+			require_once _CONST_VIEW_PATH . 'samvat-' . $this->_issue . '/index.php';
+		}
+	}
 }
 ?>

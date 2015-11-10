@@ -1521,5 +1521,18 @@ class magazineModel extends Database {
 
 		return $months;
 	}
+
+	protected function checkSamvatSpecialIssueValidity($specialIssue) {
+		$special_issue_list = array('november2015' => array('registered_from' => '2015-07-21 00:00:00', 'registered_to' => '2015-11-30 23:59:59'));
+		$this->_modelQuery = 'select count(1) as cnt from users where uid=:uid and created_date between "' . $special_issue_list[$specialIssue]['registered_from'] . '" and "' . $special_issue_list[$specialIssue]['registered_to'] . '"';
+		$this->query($this->_modelQuery);
+		$this->bindByValue('uid', base64_decode($_SESSION['_uid']));
+		$this->_queryResult = $this->resultset();
+		if ($this->_queryResult[0]['cnt'] == 1) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 }
 ?>
