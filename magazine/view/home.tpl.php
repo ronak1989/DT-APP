@@ -350,42 +350,29 @@ if ($_SESSION['_loggedIn'] == 1) {
 	$complete_issue_list = '';
 	if (is_array($this->_data['completeIssues'])) {
 		$issue_array = array(
-			'november2015' => array('issue' => 'November 2015 issue', 'issue_url' => '/magazine/november2015', 'issue_cover_img' => 'view/november2015/cover.jpg'),
-			'october2015' => array('issue' => 'October 2015 issue', 'issue_url' => '/magazine/october2015', 'issue_cover_img' => 'view/october2015/cover.jpg'),
-			'september2015' => array('issue' => 'September 2015 issue', 'issue_url' => '/magazine/september2015', 'issue_cover_img' => 'view/september2015/cover.jpg'),
-			'august2015' => array('issue' => 'August 2015 issue', 'issue_url' => '/magazine/august2015', 'issue_cover_img' => 'view/august2015/cover.jpg'),
+			'november2015' => array('issue' => 'Nov 2015', 'issue_url' => '/magazine/november2015', 'issue_cover_img' => 'view/november2015/cover.jpg'),
+			'october2015' => array('issue' => 'Oct 2015', 'issue_url' => '/magazine/october2015', 'issue_cover_img' => 'view/october2015/cover.jpg'),
+			'september2015' => array('issue' => 'Sept 2015', 'issue_url' => '/magazine/september2015', 'issue_cover_img' => 'view/september2015/cover.jpg'),
+			'august2015' => array('issue' => 'Aug 2015', 'issue_url' => '/magazine/august2015', 'issue_cover_img' => 'view/august2015/cover.jpg'),
 		);
 		$this->_data['completeIssues'] = array_flip($this->_data['completeIssues']);
 		$this->_data['completeIssues'] = array_intersect_key($issue_array, $this->_data['completeIssues']);
 		$cntr = 0;
 		foreach ($this->_data['completeIssues'] as $key => $value) {
-			if ($cntr == 0) {
-				$active_cls = 'active';
-			} else {
-				$active_cls = '';
-			}
-
-			$complete_issue_list .= '<div class="' . $active_cls . ' item">
-        <a href="' . $value['issue_url'] . '" target="_new">
-          <span>
-             <img src="' . $value['issue_cover_img'] . '" width="189px" height="260px">
-           </span>
-        </a>
-        <a href="' . $value['issue_url'] . '" target="_new"><span class="reviewer-name">' . $value['issue'] . '</span></a>
-      </div>';
+			$complete_issue_list .= '<li><a href="' . $value['issue_url'] . '" target="_new"><img src="' . $value['issue_cover_img'] . '" width="88" height="126" alt="" border="0" title="' . $value['issue'] . '" /><br>' . $value['issue'] . '</a></li>';
 			$cntr++;
 		}
 	}
 	$partial_issue_array = array(
-		'november2015' => array('issue' => 'November 2015 issue', 'issue_url' => '/sneak-preview/november2015', 'issue_cover_img' => 'view/partial-november2015/cover.jpg'),
-		'october2015' => array('issue' => 'October 2015 issue', 'issue_url' => '/sneak-preview/october2015', 'issue_cover_img' => 'view/partial-october2015/cover.jpg'),
-		'september2015' => array('issue' => 'September 2015 issue', 'issue_url' => '/sneak-preview/september2015', 'issue_cover_img' => 'view/partial-september2015/cover.jpg'),
-		'august2015' => array('issue' => 'August 2015 issue', 'issue_url' => '/sneak-preview/august2015', 'issue_cover_img' => 'view/partial-august2015/cover.jpg'),
-		'july2015' => array('issue' => 'July 2015 issue', 'issue_url' => '/sneak-preview/july2015', 'issue_cover_img' => 'view/partial-july2015/cover.jpg'),
-		'june2015' => array('issue' => 'June 2015 issue', 'issue_url' => '/sneak-preview/june2015', 'issue_cover_img' => 'view/partial-june2015/cover.jpg'),
-		'may2015' => array('issue' => 'May 2015 issue', 'issue_url' => '/sneak-preview/may2015', 'issue_cover_img' => 'view/partial-may2015/cover.jpg'),
-		'april2015' => array('issue' => 'April 2015 issue', 'issue_url' => '/sneak-preview/april2015', 'issue_cover_img' => 'view/partial-april2015/cover.jpg'),
-		'march2015' => array('issue' => 'March 2015 issue', 'issue_url' => '/sneak-preview/march2015', 'issue_cover_img' => 'view/partial-march2015/cover.jpg'),
+		'november2015' => array('issue' => 'Nov 2015', 'issue_url' => '/sneak-preview/november2015', 'issue_cover_img' => 'view/partial-november2015/cover.jpg'),
+		'october2015' => array('issue' => 'Oct 2015', 'issue_url' => '/sneak-preview/october2015', 'issue_cover_img' => 'view/partial-october2015/cover.jpg'),
+		'september2015' => array('issue' => 'Sept 2015', 'issue_url' => '/sneak-preview/september2015', 'issue_cover_img' => 'view/partial-september2015/cover.jpg'),
+		'august2015' => array('issue' => 'Aug 2015', 'issue_url' => '/sneak-preview/august2015', 'issue_cover_img' => 'view/partial-august2015/cover.jpg'),
+		'july2015' => array('issue' => 'July 2015', 'issue_url' => '/sneak-preview/july2015', 'issue_cover_img' => 'view/partial-july2015/cover.jpg'),
+		'june2015' => array('issue' => 'June 2015', 'issue_url' => '/sneak-preview/june2015', 'issue_cover_img' => 'view/partial-june2015/cover.jpg'),
+		'may2015' => array('issue' => 'May 2015', 'issue_url' => '/sneak-preview/may2015', 'issue_cover_img' => 'view/partial-may2015/cover.jpg'),
+		'april2015' => array('issue' => 'April 2015', 'issue_url' => '/sneak-preview/april2015', 'issue_cover_img' => 'view/partial-april2015/cover.jpg'),
+		'march2015' => array('issue' => 'March 2015', 'issue_url' => '/sneak-preview/march2015', 'issue_cover_img' => 'view/partial-march2015/cover.jpg'),
 	);
 	if ($complete_issue_list == '') {
 		$register_text = '<a href="http://magazine.dalaltimes.com#registration_sub" style="text-decoration:none;"><h5 style="color:#FFFFFF;font-size:18px;">This is a partial copy. To get the latest issue or to read full version <span class="reviewer-name" style="color:#428bca">SUBSCRIBE NOW</span></h5></a>';
@@ -393,22 +380,10 @@ if ($_SESSION['_loggedIn'] == 1) {
 	$partial_issue_list = '';
 	$this->_data['partialIssues'] = array_reverse($this->_data['partialIssues']);
 	for ($i = 0; $i < count($this->_data['partialIssues']); $i++) {
-		if ($i == 0 && $complete_issue_list == '') {
-			$active_cls = 'active';
-		} else {
-			$active_cls = '';
-		}
-		$partial_issue_list .= '<div class="' . $active_cls . ' item">
-      <a href="' . $partial_issue_array[$this->_data['partialIssues'][$i]]['issue_url'] . '" target="_new">
-        <span>
-           <img src="' . $partial_issue_array[$this->_data['partialIssues'][$i]]['issue_cover_img'] . '" width="189px" height="260px">
-         </span>
-      </a>
-      <a href="' . $partial_issue_array[$this->_data['partialIssues'][$i]]['issue_url'] . '" target="_new"><span class="reviewer-name">' . $partial_issue_array[$this->_data['partialIssues'][$i]]['issue'] . '</span></a>
-    </div>';
+		$partial_issue_list .= '<li><a href="' . $partial_issue_array[$this->_data['partialIssues'][$i]]['issue_url'] . '" target="_new"><img src="' . $partial_issue_array[$this->_data['partialIssues'][$i]]['issue_cover_img'] . '" width="88" height="126" alt="" border="0" title="' . $partial_issue_array[$this->_data['partialIssues'][$i]]['issue'] . '" /><br>' . $partial_issue_array[$this->_data['partialIssues'][$i]]['issue'] . '</a></li>';
 	}
 	?>
-    <section id="emagazine" class="review norm-img" style="background-color: #000000;">
+    <section class="review norm-img" style="background-color: #000000;">
       <div class="trans-bg">
         <div class="container">
           <div class="row">
@@ -416,20 +391,54 @@ if ($_SESSION['_loggedIn'] == 1) {
               <h2 class="wow swing">Magazine</h2>
             </div>
           </div>
+          <div id="emagazine"></div>
+          <div class="col-sm-12">
+          <?php if ($complete_issue_list != '') {?>
           <div class="row">
-            <div class="col-sm-12 text-center">
-              <div id="myCarousel1" class="carousel slide" data-ride="carousel" data-wrap="false">
-                <div class="carousel-inner">
-                  <?php echo $complete_issue_list . $partial_issue_list;?>
-                </div>
-                <!-- Carousel nav -->
-                <a class="carousel-control left" href="#myCarousel1" data-slide="prev"><i class="fa fa-angle-left"></i></a>
-                <a class="carousel-control right" href="#myCarousel1" data-slide="next"><i class="fa fa-angle-right"></i></a>
+            <h2 style="margin-bottom: 10px;font-size: 20px;">Subscribed Issues</h2>
+            <div id="liquid1" class="liquid">
+              <span class="previous"></span>
+              <div class="wrapper">
+                <ul>
+                  <?php echo $complete_issue_list;?>
+                </ul>
               </div>
+              <span class="next"></span>
             </div>
           </div>
-          <div class="row text-center">
-            <?php echo $register_text;?>
+          <?php }
+	?>
+          <div class="row">
+            <h2 style="margin-bottom: 10px;font-size: 20px;">Special Issues</h2>
+            <div id="liquid2" class="liquid">
+              <span class="previous"></span>
+              <div class="wrapper">
+                <ul>
+                  <li><a href="/samvat/november2015"><img src="view/samvat-november2015/cover.jpg" width="88" height="126" border="0" /><br>Samvat 2015</a></li>
+
+                </ul>
+              </div>
+              <span class="next"></span>
+            </div>
+          </div>
+        <?php if ($partial_issue_list != '') {?>
+            <div class="row">
+              <h2 style="margin-bottom: 10px;font-size: 20px;">Partial Copy</h2>
+              <div id="liquid3" class="liquid">
+                <span class="previous"></span>
+                <div class="wrapper">
+                  <ul>
+                  <?php echo $partial_issue_list;?>
+                  </ul>
+                </div>
+                <span class="next"></span>
+              </div>
+            </div>
+          <?php }
+	?>
+            <div class="row text-center">
+              <?php echo $register_text;?>
+            </div>
           </div>
         </div>
       </div> <!-- /.trans-bg -->

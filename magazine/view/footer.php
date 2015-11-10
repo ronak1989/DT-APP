@@ -454,6 +454,7 @@
     <script src="public/js/jquery.ui.position.min.js"></script>
     <script src="public/js/jquery.ui.menu.min.js"></script>
     <script src="public/js/jquery.ui.autocomplete.min.js"></script>
+    <script src="public/js/jquery.liquidcarousel.pack.js"></script>
 
    <?php
 if (empty($this->_data['load_js'])) {
@@ -478,6 +479,17 @@ if (empty($this->_data['load_js'])) {
         $('#download').parallax("50%", 0.5, true);
         $('#footer').parallax("50%", 0.5, true);
 	//}
+        if($("#liquid1").length != 0) {
+          $('#liquid1').liquidcarousel({height:160, duration:100, hidearrows:false});
+        }
+
+        if($("#liquid2").length != 0) {
+          $('#liquid2').liquidcarousel({height:160, duration:100, hidearrows:false});
+        }
+
+        if($("#liquid3").length != 0) {
+          $('#liquid3').liquidcarousel({height:160, duration:100, hidearrows:false});
+        }
       });
 
     </script>
