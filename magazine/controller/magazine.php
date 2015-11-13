@@ -690,5 +690,9 @@ class magazine extends magazineModel {
 			require_once _CONST_VIEW_PATH . 'samvat-' . $this->_issue . '/index.php';
 		}
 	}
+
+	public function showFreeSpecialIssue() {
+		require_once _CONST_VIEW_PATH . 'samvat-' . $this->_issue . '/index.php';
+	}
 }
 ?>
