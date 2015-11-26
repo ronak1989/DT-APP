@@ -29,6 +29,25 @@ class EditorModel extends Database {
 			'12' => 'The Forecaster');
 	}
 
+	protected function getNewsCategorySeoDetails($catId) {
+		/**
+		 * Always add new category at the end of the array
+		 */
+		$seodetails = array(
+			'1' => array('title' => 'Business News, Business Financial News, Stock Market Investing, Commodities – Dalal Times', 'description' => 'Dalal Times offers latest business news, financial news, stock markets tips, stock chart, market outlook, sensex, nifty, IPO, commodities news', 'keywords' => 'bombay stock exchange, Indian stock market, bse, nse, national stock exchange, sensex, stock market, trading, Indian stock market chart, stocks markets, ipo analysis, market analysis.'),
+			'7' => array('title' => 'Indian Economy News, RBI, Credit Policy – Dalal Times', 'description' => 'Dalal Times provides latest news about economic growth of India, inflation, domestic market, industries and other economic news', 'keywords' => 'Indian Economy News, Economic News, Latest Economic News Graphics, RBI, Credit Policy'),
+			'2' => array('title' => 'Corporate Buzz, Merger and Acquisition Action, Deal Street – Dalal Times', 'description' => 'Track latest Corporate Buzz, Mergers and Acquisition news, expert opinion on Dalal Times.', 'keywords' => 'current corporate buzz, Merger and Acquisition Action'),
+			'4' => array('title' => 'Investing – Fixed Income, Property, Retirement, Loans, Property, Credit Card – Dalal Times', 'description' => 'Easiest step to know and manage personal finance which includes Insurance, Retirement planning, Property, Credit Card, Loans, Fixed Income, Tax news and updates on dalaltimes.com.', 'keywords' => 'Investment planning, Retirement, Insurance, Taxes, loans, Property and credit cards'),
+			'3' => array('title' => 'Stocks, Corporates, Politics, Current Affair, Sports, World Business News', 'description' => 'Track latest news and updates on Indian Industry, Corporates, Politics, Current Affair and including sectorial news.', 'keywords' => 'Live Business News, Share Market Tips, Politics news, Current Affair, Global Market News, Stock Split News, Best Stock Market Tips, Sensex News, Nifty News.'),
+			'5' => array('title' => 'India Earnings, Financial Results Analysis, Stock Earnings – Dalal Times', 'description' => 'Check quarterly and annuals results news and analysis of Indian companies and more at Dalal Times.', 'keywords' => 'Quarterly Results, Financial Results, Annual Results, Results Analysis.'),
+			/*'9' => 'IPO',*/
+			/*'10' => 'Wire News',*/
+			'11' => array('title' => 'Technical Chart of the day on stocks and indices', 'description' => 'Get comprehensive technical analysis on stocks and indices', 'keywords' => 'Technical Analysis stocks, indices, nifty.'),
+			'12' => array('title' => 'Forecasts and insights on the Stock Market and Indian economy.', 'description' => 'Official blog of Dalal Times founder Praveen Pathiyil', 'keywords' => 'Technical Analysis stocks, indices, nifty'),
+		);
+		return $seodetails[$catId];
+	}
+
 	protected function getNewsSubCategory($newsCategoryId) {
 		/**
 		 * Always add new category at the end of the array
