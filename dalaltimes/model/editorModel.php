@@ -81,6 +81,15 @@ class EditorModel extends Database {
 			$fields['related_heading'] = $relatedHeadline['headline'];
 		}
 
+		$this->_modelQuery = 'select file_path from news_attachments na JOIN attachments attach ON na.attachment_id = attach.attachment_id WHERE article_id = :article_id';
+		$this->query($this->_modelQuery);
+		$this->bindByValue('article_id', $fields['articleId']);
+		$news_attachments = $this->resultset();
+		$attachments = array();
+		foreach ($news_attachments as $key => $value) {
+			$attachments[] = $value['file_path'];
+		}
+
 		$fields['heading'] = $this->_queryResult['headline'];
 		$fields['sms_heading'] = $this->_queryResult['sms_heading'];
 		$fields['summary'] = $this->_queryResult['summary'];
@@ -108,6 +117,7 @@ class EditorModel extends Database {
 		$fields['image_1600'] = $this->_queryResult['image_1600'];
 		$fields['related_story'] = $this->_queryResult['related_story'];
 		$fields['publish'] = $this->_queryResult['publish'];
+		$fields['attachments'] = $attachments;
 		$fields['transfer_to_newspublish_tbl'] = $this->_queryResult['transfer_to_newspublish_tbl'];
 		$fields['assign_to_prod'] = $this->_queryResult['assign_to_production'];
 		if ($fields['assign_to_prod'] == 1) {
