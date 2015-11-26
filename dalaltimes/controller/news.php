@@ -69,6 +69,9 @@ class News extends NewsModel {
 		$data = $this->_newsModel->getHomePageDetails();
 		$news_category = parent::getNewsCategory();
 		$menuUrl = array();
+		$metaTags['title'] = 'Dalal Times: Business and Financial News, Stock Market Investing, Economy, Personal Finance, Commodities, Mutual Fund';
+		$metaTags['description'] = 'Dalal Times offers latest business news, financial news of BSE, NSE listed companies with fundamental views and technical analysis, manage your finance with personal finance, mutual funds space.';
+		$metaTags['keywords'] = 'stock markets, business News, financial News, commodity market, Sensex, Nifty, bombay stock exchange, indian stock market, bse, nse, stock market, trading, stock market rates, Indian stock market chart, investment, ipo analysis, market analysis.';
 		foreach ($news_category as $key => $value) {
 			$catUrl[$key] = $this->_commonFunction->sanitizeString($value);
 			$menuUrl[$key]['name'] = ucwords(strtolower($value));
@@ -98,6 +101,11 @@ class News extends NewsModel {
 
 		if (in_array($this->category, $catUrl)) {
 			$catId = array_search($this->category, $catUrl);
+			$seo_details = parent::getNewsCategorySeoDetails($catId);
+			$metaTags['title'] = $seo_details['title'];
+			$metaTags['description'] = $seo_details['description'];
+			$metaTags['keywords'] = $seo_details['keywords'];
+
 			$this->searchParams['category_id'] = $catId;
 			$this->searchParams['publish_status'] = 1;
 			$totalCnt = $this->_newsModel->getNewsCount($this->searchParams)['cnt'];
