@@ -40,7 +40,8 @@ if ($data['article-details']['subcategory_name'] != '') {
                   <source srcset="<?php echo $data['article-details']['image_1600']; ?>" media="(min-width: 1280px)">
                   <source srcset="<?php echo $data['article-details']['image_1280']; ?>, <?php echo $data['article-details']['image_1600']; ?> 2x" media="(min-width: 769px)">
                   <source srcset="<?php echo $data['article-details']['image_615']; ?>, <?php echo $data['article-details']['image_1280']; ?> 2x" media="(min-width: 450px)">
-                  <img itemprop="image" srcset="<?php echo $data['article-details']['image_300']; ?>" alt="" title="" class="img-responsive">
+                  <source srcset="<?php echo $data['article-details']['image_300']; ?>, <?php echo $data['article-details']['image_615']; ?> 2x" media="(max-width: 450px)">
+                  <img itemprop="image" srcset="<?php echo $data['article-details']['image_1600']; ?>" alt="" title="" class="img-responsive">
                 </picture>
                 <figcaption class="article-image-slug">
                     <?php
