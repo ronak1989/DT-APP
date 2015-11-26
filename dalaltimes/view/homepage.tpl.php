@@ -40,6 +40,7 @@ include_once _CONST_VIEW_PATH . 'menu.php';
       <a class="right carousel-control" href="#mycarousel" role="button" data-slide="next">
         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
+
       </a>
     </div>
   </section>
