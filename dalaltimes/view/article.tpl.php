@@ -91,6 +91,17 @@ if ($data['article-details']['image_courtesy'] != '' && $data['article-details']
                     </div>
                     <div class="article-content">
                         <?php echo $data['article-details']['news_content']; ?>
+                        <?php
+if (!empty($data['article-details']['attachments'])) {
+	foreach ($data['article-details']['attachments'] as $key => $value) {
+		?>
+            <div class="PT10">
+                <a href="<?php echo _CONST_WEB_URL . $value; ?>" target="_blank"><img src="<?php echo _CONST_IMAGE_URL . 'pdf-Banner.jpg'; ?>" class='img-responsive center-block'></a>
+            </div>
+<?php
+}
+}
+?>
                     </div>
                     <div class="social-share-block">
                         <!-- Twitter -->
@@ -172,7 +183,7 @@ if ($data['article-details']['image_courtesy'] != '' && $data['article-details']
                         <div class="tabbable full-width-tabs">
                             <ul class="nav nav-tabs nav-justified">
                                 <li class="active"><a href="#tab-one" data-toggle="tab">LATEST</a></li>
-                                <li><a href="#tab-two" data-toggle="tab">Must Read</a></li>
+                                <li><a href="#tab-two" data-toggle="tab">MUST READ</a></li>
                             </ul>
                             <div class="tab-content">
                                 <div class="tab-pane active" id="tab-one">
