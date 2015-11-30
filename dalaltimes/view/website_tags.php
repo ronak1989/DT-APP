@@ -10,7 +10,7 @@ if ($metaTags['title'] != '') {
 <?php
 if ($metaTags['description'] != '') {
 	?>
-    <meta name="description" content="<?php echo $metaTags["keywords"]; ?>">
+    <meta name="description" content="<?php echo $metaTags["description"]; ?>">
 <?php
 }
 ?>

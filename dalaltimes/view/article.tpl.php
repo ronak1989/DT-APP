@@ -140,7 +140,7 @@ if (!empty($data['article-details']['attachments'])) {
                     </div>
                     <div class='related-story'>
                         <div class="col-xs-12">
-                            <div class="col-xs-12 col-sm-6 col-md-6 PL16 PR16">
+                            <div class="col-xs-12 col-sm-6 col-md-6 PL16 PR16 PT16">
                                 <!-- <div class="relatedarticle-block">
                                     &nbsp;
                                 </div> -->
@@ -158,7 +158,7 @@ if (!empty($data['article-details']['attachments'])) {
                                     </div>
                                 </a>
                             </div>
-                            <div class="col-xs-12 col-sm-6 col-md-6 PL16 PR16">
+                            <div class="col-xs-12 col-sm-6 col-md-6 PL16 PR16 PT16">
                                 <!-- <div class="relatedarticle-block">
                                    &nbsp;
                                 </div> -->

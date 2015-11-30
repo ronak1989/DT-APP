@@ -74,7 +74,7 @@
     },
     generateRelatedStoryBlock = function(_details){
       return[
-        '<div class="col-xs-12 col-sm-6 col-md-6 PL16 PR16">',
+        '<div class="col-xs-12 col-sm-6 col-md-6 PL16 PR16 PT16">',
           '<a href="'+_details.news_url+'">',
               '<div class="relatedarticle-img">',
                   '<img width="100%;" class="img-responsive" src="'+_CONST_WEB_URL + _details.image_300+'">',
