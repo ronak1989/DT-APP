@@ -1218,7 +1218,7 @@ class magazineModel extends Database {
 		$this->bindByValue('package_id', $_insertVals['package_id']);
 		$this->bindByValue('uid', base64_decode($_SESSION['_uid']));
 		$this->bindByValue('subscription_type', $_insertVals['subscription_type']);
-		$this->bindByValue('subscription_amount', $_insertVals['substr(string, start)cription_amount']);
+		$this->bindByValue('subscription_amount', $_insertVals['subscription_amount']);
 		$this->bindByValue('delivery_method', $_insertVals['delivery_method']);
 		//print_r($_insertVals);die();
 		if ($this->execute()) {
