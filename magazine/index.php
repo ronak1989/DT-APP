@@ -23,6 +23,7 @@ $_router->map('POST', '/forgot-password', 'magazine#forgotPassword');
 $_router->map('GET', '/logout', 'magazine#logout');
 $_router->map('POST', '/ask-dt', 'magazine#askDt');
 $_router->map('GET', '/search-stock', 'magazine#searchStock');
+$_router->map('GET', '/get-zone-details', 'magazine#getZoneDetails');
 
 $_router->map('POST', '/redirect', 'magazine#gatewayRedirect');
 $_router->map('POST', '/gateway-response', 'magazine#gatewayResponse');
