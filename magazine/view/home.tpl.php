@@ -239,7 +239,9 @@ foreach ($this->_data['sneakpreview'] as $key => $value) {
 	echo '<div class="col-sm-3"></div>';
 	foreach ($this->_data['subscribe'] as $key => $value) {
 		$type = ($value['type'] == 'digital') ? 'eMagazine' : 'Magazine';
-		$copy = ($value['type'] == 'digital') ? 'only eMagazine' : 'Print + eMagazine';
+    $copy = ($value['type'] == 'digital') ? 'only eMagazine' : 'Print + eMagazine';
+    $youpay = ($value['type'] == 'digital') ? 'You Pay - Rs ' . $value['package_value'] : 'You Pay - Rs ' . $value['package_value'].'<br>+<br>Courier Charges';
+		
 
 		$modulus_val = $key % 3;
 		switch ($modulus_val) {
@@ -273,7 +275,7 @@ foreach ($this->_data['sneakpreview'] as $key => $value) {
                                 <ul>
                                   <li>' . $value['no_of_issues'] . ' issues</li>
                                   <li><strike>Original Price - Rs ' . $value['cover_price'] . '</strike></li>
-                                  <li>You Pay - Rs ' . $value['package_value'] . '</li>
+                                  <li>'.$youpay.'</li>
                                   <li>' . $copy . '</li>
                                   <li class="' . $background_button_color . '">
                                     <a class="' . $subscribe_button . '" href="javascript:;" onclick="getPackage(' . $value['package_id'] . ')">subscribe</a>
@@ -291,7 +293,7 @@ foreach ($this->_data['sneakpreview'] as $key => $value) {
 foreach ($this->_data['subscribe'] as $key => $value) {
 		$type = ($value['type'] == 'digital') ? 'eMagazine' : 'Magazine';
 		$copy = ($value['type'] == 'digital') ? 'only eMagazine' : 'Print + eMagazine';
-
+    $youpay = ($value['type'] == 'digital') ? 'You Pay - Rs ' . $value['package_value'] : 'You Pay - Rs ' . $value['package_value'].'<br>+<br>Courier Charges';
 		$modulus_val = $key % 3;
 		switch ($modulus_val) {
 			case '0':
@@ -323,7 +325,7 @@ foreach ($this->_data['subscribe'] as $key => $value) {
                               <div class="pkg_plan">
                                 <ul>
                                   <li>' . $value['no_of_issues'] . ' issues</li>
-                                  <li>You Pay - Rs' . $value['package_value'] . '</li>
+                                  <li>' . $youpay . '</li>
                                   <li>' . $copy . '</li>
                                   <li class="' . $background_button_color . '">
                                     <a class="' . $subscribe_button . '" href="javascript:;" onclick="getPackage(' . $value['package_id'] . ')">subscribe</a>

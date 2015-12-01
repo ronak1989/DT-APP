@@ -556,12 +556,12 @@ class magazineModel extends Database {
 
 	private function getUserSelectedPackageDetails() {
 		$pkgPriceDtl = '';
-		$courier_mumbai = $this->_queryResult['package_value'] + $this->_queryResult['courier_mumbai'];
-		$courier_roi = $this->_queryResult['package_value'] + $this->_queryResult['courier_roi'];
-    $courier_within_zone = (int) $this->_queryResult["courier_within_zone"] + (int) $this->_queryResult["package_value"];
-    $courier_east_zone = (int) $this->_queryResult["courier_east_zone"] + (int) $this->_queryResult["package_value"];
-    $courier_northeast_zone = (int) $value["courier_east_zone"] + (int) $value["package_value"];
-    $courier_jk = (int) $this->_queryResult["courier_jk"] + (int) $this->_queryResult["package_value"];
+		$courier_mumbai = $this->_queryResult['courier_mumbai'];
+		$courier_roi = $this->_queryResult['courier_roi'];
+    $courier_within_zone = (int) $this->_queryResult["courier_within_zone"];
+    $courier_east_zone = (int) $this->_queryResult["courier_east_zone"];
+    $courier_northeast_zone = (int) $this->_queryResult["courier_east_zone"];
+    $courier_jk = (int) $this->_queryResult["courier_jk_zone"];
       
 		if ($this->_queryResult['subscription_type'] == 'digital') {
 			$type = 'eMagazine';
@@ -966,7 +966,7 @@ class magazineModel extends Database {
       $this->_details[$key]['courier_within_zone'] = (int) $value["courier_within_zone"] + (int) $value["package_value"];
       $this->_details[$key]['courier_east_zone'] = (int) $value["courier_east_zone"] + (int) $value["package_value"];
       $this->_details[$key]['courier_northeast_zone'] = (int) $value["courier_east_zone"] + (int) $value["package_value"];
-			$this->_details[$key]['courier_jk'] = (int) $value["courier_jk"] + (int) $value["package_value"];
+			$this->_details[$key]['courier_jk'] = (int) $value["courier_jk_zone"] + (int) $value["package_value"];
 			$this->_details[$key]['courier_roi'] = (int) $value["courier_roi"] + (int) $value["package_value"];
 			$this->_details[$key]['package_value'] = (int) $value["package_value"];
 			$this->_details[$key]['amount_saved'] = (int) $this->_details[$key]['cover_price'] - $this->_details[$key]['package_value'];
@@ -1278,7 +1278,7 @@ class magazineModel extends Database {
               } else if(in_array($_POST['billing_state'], $within_zone)&& $this->_pkgId==7) {
                 $amount = $this->_queryResult['package_value'] + $this->_queryResult['courier_within_zone'];
               } else if(in_array($_POST['billing_state'], $jk_array)&& $this->_pkgId==7) {
-                $amount = $this->_queryResult['package_value'] + $this->_queryResult['courier_jk'];
+                $amount = $this->_queryResult['package_value'] + $this->_queryResult['courier_jk_zone'];
 							} else {
 								/**
 								 * if city != mumbai and city != bombay
