@@ -400,14 +400,14 @@ class magazineModel extends Database {
 			$this->query($this->_modelQuery);
 			$this->_queryResult = $this->single();
 			if ($this->_queryResult['cnt'] == 1) {
-				$this->_modelQuery = "SELECT * FROM subscription_packages where status='active' and site_id='6' and package_id in (4,5)";
+				$this->_modelQuery = "SELECT * FROM subscription_packages where status='active' and site_id='6' and package_id in (7,8,9)";
 			} else {
 				unset($_SESSION['q']);
-				$this->_modelQuery = "SELECT * FROM subscription_packages where status='active' and site_id='6' and package_id in (1,2,3,7)";
+				$this->_modelQuery = "SELECT * FROM subscription_packages where status='active' and site_id='6' and package_id in (7,8,9)";
 			}
 		} else {
 			unset($_SESSION['q']);
-			$this->_modelQuery = "SELECT * FROM subscription_packages where status='active' and site_id='6' and package_id in (1,2,3,7)";
+			$this->_modelQuery = "SELECT * FROM subscription_packages where status='active' and site_id='6' and package_id in (7,8,9)";
 		}
 
 		if (!isset($pkg_id)) {
