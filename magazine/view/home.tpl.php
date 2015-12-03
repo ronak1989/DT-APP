@@ -188,7 +188,7 @@ foreach ($this->_data['whydt']['featurelist-right'] as $key => $value) {
               <h2>Sneak Peek</h2>
             </div>
             <div style="text-align: justify;">
-                <p>The November issue of Dalal Times Magazine highlights the power that the Indian investors have with Nirmal Jain, Founder & Chairman, IIFL Holdings. The first issue (Vol. II) of the magazine also brings to you reader-favourite segments like How Good A Bet, Gems In The Offing, Make or Break et al for investors to make better and informed portfolio decisions. Subscribe and read stock recommendations and suggestions that hold ground even in the present turbulent phase of the market.</p>
+                <p>The December issue of Dalal Times Magazine highlights India’s economic growth in both domestic and global terms in an interview with Andrew Holland, CEO, Ambit Investment Advisors. The second issue (Vol. II) of the magazine also brings to you reader-favourite segments like How Good A Bet, Gems In The Offing, Pink Stock et al for investors to make better and informed portfolio decisions. Subscribe and read stock recommendations and suggestions that hold ground even in the present turbulent phase of the market.</p>
               </div>
           </div>
         </div>
