@@ -304,7 +304,7 @@ foreach ($data['earnings-widget'] as $key => $value) {
     </div>
 	<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 PT16 PL16 PR16">
     	<div class="twitter-container">
-            <a class="twitter-timeline"  href="https://twitter.com/dalaltimes" data-widget-id="658551591054766080">Tweets by @dalaltimes</a>
+            <a class="twitter-timeline"  href="https://twitter.com/dalaltimes" data-widget-id="658551591054766080" width="100%" height="400px">Tweets by @dalaltimes</a>
         </div>
     </div>
 </div>

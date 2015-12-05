@@ -5,7 +5,7 @@
 require_once _CONST_VIEW_PATH . 'header_tags.php';
 ?>
  </head>
-<body  class="theme_1" style="background: #F2F2F2 url('<?php echo _CONST_IMAGE_URL;?>bg.gif');">
+<body  class="theme_1" style="background: #F2F2F2 url('<?php echo _CONST_IMAGE_URL; ?>bg.gif');">
 <?php
 require_once _CONST_VIEW_PATH . 'header.php';
 ?>
@@ -80,7 +80,7 @@ require_once _CONST_VIEW_PATH . 'header.php';
             <!-- Home Page -->
             <div id="home" class="pt-page-current col-md-12">
                           <div class="main_slider">
-                                <img src="<?php echo _CONST_IMAGE_URL;?>home_pg.jpg">
+                                <img src="<?php echo _CONST_IMAGE_URL; ?>home_pg.jpg">
                             </div>
 
             </div>
@@ -90,7 +90,7 @@ require_once _CONST_VIEW_PATH . 'header.php';
             <div id="about" class="col-md-12">
               <div class="col-md-2 pull-right">
                 <div class="logo">
-                  <img src="<?php echo _CONST_IMAGE_URL?>Logo-DT.png" width="100px" height="100px" class="img-responsive">
+                  <img src="<?php echo _CONST_IMAGE_URL ?>Logo-DT.png" width="100px" height="100px" class="img-responsive">
                 </div>
               </div>
 
@@ -144,7 +144,7 @@ require_once _CONST_VIEW_PATH . 'header.php';
             <div id="management" class="col-md-12">
               <div class="col-md-2 pull-right">
                 <div class="logo">
-                  <img src="<?php echo _CONST_IMAGE_URL?>Logo-DT.png" width="100px" height="100px" class="img-responsive">
+                  <img src="<?php echo _CONST_IMAGE_URL ?>Logo-DT.png" width="100px" height="100px" class="img-responsive">
                 </div>
               </div>
 
@@ -168,7 +168,7 @@ require_once _CONST_VIEW_PATH . 'header.php';
                   </div>
                   <div class=" col-sm-3 mgmt-img">
                     <div>
-                      <img src="<?php echo _CONST_IMAGE_URL?>m1.jpg" alt="" class="img-responsive">
+                      <img src="<?php echo _CONST_IMAGE_URL ?>m1.jpg" alt="" class="img-responsive">
                       <div class="caption">
                       Praveen Pathiyil, Founder
                     </div>
@@ -188,7 +188,7 @@ require_once _CONST_VIEW_PATH . 'header.php';
                   </div>
                   <div class=" col-sm-3 mgmt-img">
                     <div>
-                      <img src="<?php echo _CONST_IMAGE_URL?>m2.jpg" alt="" class="img-responsive" >
+                      <img src="<?php echo _CONST_IMAGE_URL ?>m2.jpg" alt="" class="img-responsive" >
                       <div class="caption">
                       Sajid Ahamed, Founder
                     </div>
@@ -209,7 +209,7 @@ require_once _CONST_VIEW_PATH . 'header.php';
                   </div>
                   <div class=" col-sm-3 mgmt-img">
                     <div>
-                      <img src="<?php echo _CONST_IMAGE_URL?>m3.jpg" alt="" class="img-responsive" >
+                      <img src="<?php echo _CONST_IMAGE_URL ?>m3.jpg" alt="" class="img-responsive" >
                       <div class="caption">
                       Nameeta Shinghwani, CEO
                     </div>
@@ -229,7 +229,7 @@ require_once _CONST_VIEW_PATH . 'header.php';
             <div id="product" class="col-md-12">
               <div class="col-md-2 pull-right">
                 <div class="logo">
-                  <img src="<?php echo _CONST_IMAGE_URL?>Logo-DT.png" width="100px" height="100px" class="img-responsive">
+                  <img src="<?php echo _CONST_IMAGE_URL ?>Logo-DT.png" width="100px" height="100px" class="img-responsive">
                 </div>
               </div>
 
@@ -250,7 +250,7 @@ require_once _CONST_VIEW_PATH . 'header.php';
                     <div class="clear"></div>
                     <div class="col-sm-12 product-img">
                       <div>
-                        <img src="<?php echo _CONST_IMAGE_URL;?>P3.jpg" class="img-responsive">
+                        <img src="<?php echo _CONST_IMAGE_URL; ?>P3.jpg" class="img-responsive">
                       </div>
                       <div class="caption">
                         Digital
@@ -271,7 +271,7 @@ require_once _CONST_VIEW_PATH . 'header.php';
                     <div class="clear"></div>
                     <div class="col-sm-12 product-img">
                       <div>
-                        <img src="<?php echo _CONST_IMAGE_URL;?>P2.jpg" class="img-responsive">
+                        <img src="<?php echo _CONST_IMAGE_URL; ?>P2.jpg" class="img-responsive">
                       </div>
                       <div class="caption">
                         Magazine
@@ -292,7 +292,7 @@ require_once _CONST_VIEW_PATH . 'header.php';
                     <div class="clear"></div>
                     <div class="col-sm-12 product-img">
                       <div>
-                        <img src="<?php echo _CONST_IMAGE_URL;?>P1.jpg" class="img-responsive">
+                        <img src="<?php echo _CONST_IMAGE_URL; ?>P1.jpg" class="img-responsive">
                       </div>
                       <div class="caption">
                         Newsletter
@@ -315,7 +315,7 @@ require_once _CONST_VIEW_PATH . 'header.php';
                     <div class="clear"></div>
                     <div class="col-sm-12 product-img">
                       <div>
-                        <img src="<?php echo _CONST_IMAGE_URL;?>P4.jpg" class="img-responsive">
+                        <img src="<?php echo _CONST_IMAGE_URL; ?>P4.jpg" class="img-responsive">
                       </div>
                       <div class="caption">
                         Market Mentors
@@ -337,7 +337,7 @@ require_once _CONST_VIEW_PATH . 'header.php';
                     <div class="clear"></div>
                     <div class="col-sm-12 product-img">
                       <div>
-                        <img src="<?php echo _CONST_IMAGE_URL;?>P5.jpg" class="img-responsive">
+                        <img src="<?php echo _CONST_IMAGE_URL; ?>P5.jpg" class="img-responsive">
                       </div>
                       <div class="caption">
                         DTX30
@@ -363,7 +363,7 @@ require_once _CONST_VIEW_PATH . 'header.php';
             <div id="contact" class="col-md-12">
               <div class="col-md-2 pull-right">
                 <div class="logo">
-                  <img src="<?php echo _CONST_IMAGE_URL?>Logo-DT.png" width="100px" height="100px" class="img-responsive">
+                  <img src="<?php echo _CONST_IMAGE_URL ?>Logo-DT.png" width="100px" height="100px" class="img-responsive">
                 </div>
               </div>
 
@@ -509,7 +509,7 @@ require_once _CONST_VIEW_PATH . 'header.php';
             <div id="testimonial" class="col-md-12">
               <div class="col-md-2 pull-right">
                 <div class="logo">
-                  <img src="<?php echo _CONST_IMAGE_URL?>Logo-DT.png" width="100px" height="100px" class="img-responsive">
+                  <img src="<?php echo _CONST_IMAGE_URL ?>Logo-DT.png" width="100px" height="100px" class="img-responsive">
                 </div>
               </div>
 
@@ -578,7 +578,7 @@ require_once _CONST_VIEW_PATH . 'header.php';
             <div id="carrer" class="col-md-12">
               <div class="col-md-2 pull-right">
                 <div class="logo">
-                  <img src="<?php echo _CONST_IMAGE_URL?>Logo-DT.png" width="100px" height="100px" class="img-responsive">
+                  <img src="<?php echo _CONST_IMAGE_URL ?>Logo-DT.png" width="100px" height="100px" class="img-responsive">
                 </div>
               </div>
 
@@ -615,7 +615,7 @@ require_once _CONST_VIEW_PATH . 'header.php';
                 <p>It is our people’s culture that sets us apart from other employers. </p>
                 <p>We do not offer jobs, but create careers that hones present skills-set and adds to the individual’s learning and development process. </p>
                 <p>We at Dalal Times believe in creating positive work environment that channelizes every team members’ efforts to achieve company’s objectives.</p>
-
+                <p>Get in touch. Send us a message to <a href="mailto:careers@dalaltimes.com">careers@dalaltimes.com</a></p>
                 <div class="clear"></div>
               </div>
               <div class="box">
@@ -679,7 +679,7 @@ require_once _CONST_VIEW_PATH . 'header.php';
             <div id="photo" class="col-md-12">
               <div class="col-md-2 pull-right">
                 <div class="logo">
-                  <img src="<?php echo _CONST_IMAGE_URL?>Logo-DT.png" width="100px" height="100px" class="img-responsive">
+                  <img src="<?php echo _CONST_IMAGE_URL ?>Logo-DT.png" width="100px" height="100px" class="img-responsive">
                 </div>
               </div>
 
@@ -703,7 +703,7 @@ require_once _CONST_VIEW_PATH . 'header.php';
                 <ul class="portfolio_grid col-md-12">
                     <li class="mix videos">
                       <a href="#portfolio_popup">
-                        <img src="<?php echo _CONST_IMAGE_URL;?>V1.jpg" alt="img" />
+                        <img src="<?php echo _CONST_IMAGE_URL; ?>V1.jpg" alt="img" />
                         <div class="main">
                           <div class="inner">
                             <i class="fa fa-video-camera licon"></i>
@@ -722,7 +722,7 @@ require_once _CONST_VIEW_PATH . 'header.php';
                     </li>
                     <li class="mix webdesign">
                       <a href="#portfolio_popup">
-                        <img src="<?php echo _CONST_IMAGE_URL;?>7.jpg" alt="img" />
+                        <img src="<?php echo _CONST_IMAGE_URL; ?>7.jpg" alt="img" />
                         <div class="main">
                           <div class="inner">
                             <i class="fa fa-picture-o licon"></i>
@@ -732,14 +732,14 @@ require_once _CONST_VIEW_PATH . 'header.php';
                       </a>
                       <div class="popup_information">
                           <div class="top">
-                              <img src="<?php echo _CONST_IMAGE_URL;?>7_r.jpg" alt="img"/>
+                              <img src="<?php echo _CONST_IMAGE_URL; ?>7_r.jpg" alt="img"/>
                           </div>
                           <div class="clear"></div>
                       </div>
                     </li>
                     <li class="mix webdesign">
                       <a href="#portfolio_popup">
-                        <img src="<?php echo _CONST_IMAGE_URL;?>9.jpg" alt="img" />
+                        <img src="<?php echo _CONST_IMAGE_URL; ?>9.jpg" alt="img" />
                         <div class="main">
                           <div class="inner">
                             <i class="fa fa-picture-o licon"></i>
@@ -749,14 +749,14 @@ require_once _CONST_VIEW_PATH . 'header.php';
                       </a>
                       <div class="popup_information">
                           <div class="top">
-                              <img src="<?php echo _CONST_IMAGE_URL;?>9_r.jpg" alt="img"/>
+                              <img src="<?php echo _CONST_IMAGE_URL; ?>9_r.jpg" alt="img"/>
                           </div>
                           <div class="clear"></div>
                       </div>
                     </li>
                     <li class="mix webdesign">
                       <a href="#portfolio_popup">
-                        <img src="<?php echo _CONST_IMAGE_URL;?>13.jpg" alt="img" />
+                        <img src="<?php echo _CONST_IMAGE_URL; ?>13.jpg" alt="img" />
                         <div class="main">
                           <div class="inner">
                             <i class="fa fa-picture-o licon"></i>
@@ -766,14 +766,14 @@ require_once _CONST_VIEW_PATH . 'header.php';
                       </a>
                       <div class="popup_information">
                           <div class="top">
-                              <img src="<?php echo _CONST_IMAGE_URL;?>13_r.jpg" alt="img"/>
+                              <img src="<?php echo _CONST_IMAGE_URL; ?>13_r.jpg" alt="img"/>
                           </div>
                           <div class="clear"></div>
                       </div>
                     </li>
                     <li class="mix webdesign">
                       <a href="#portfolio_popup">
-                        <img src="<?php echo _CONST_IMAGE_URL;?>17.jpg" alt="img" />
+                        <img src="<?php echo _CONST_IMAGE_URL; ?>17.jpg" alt="img" />
                         <div class="main">
                           <div class="inner">
                             <i class="fa fa-picture-o licon"></i>
@@ -783,14 +783,14 @@ require_once _CONST_VIEW_PATH . 'header.php';
                       </a>
                       <div class="popup_information">
                           <div class="top">
-                              <img src="<?php echo _CONST_IMAGE_URL;?>17_r.jpg" alt="img"/>
+                              <img src="<?php echo _CONST_IMAGE_URL; ?>17_r.jpg" alt="img"/>
                           </div>
                           <div class="clear"></div>
                       </div>
                     </li>
                     <li class="mix webdesign">
                       <a href="#portfolio_popup">
-                        <img src="<?php echo _CONST_IMAGE_URL;?>18.jpg" alt="img" />
+                        <img src="<?php echo _CONST_IMAGE_URL; ?>18.jpg" alt="img" />
                         <div class="main">
                           <div class="inner">
                             <i class="fa fa-picture-o licon"></i>
@@ -800,7 +800,7 @@ require_once _CONST_VIEW_PATH . 'header.php';
                       </a>
                       <div class="popup_information">
                           <div class="top">
-                              <img src="<?php echo _CONST_IMAGE_URL;?>18_r.jpg" alt="img"/>
+                              <img src="<?php echo _CONST_IMAGE_URL; ?>18_r.jpg" alt="img"/>
                           </div>
                           <div class="clear"></div>
                       </div>
@@ -819,7 +819,7 @@ require_once _CONST_VIEW_PATH . 'header.php';
             <div id="terms" class="col-md-12">
               <div class="col-md-2 pull-right">
                 <div class="logo">
-                  <img src="<?php echo _CONST_IMAGE_URL?>Logo-DT.png" width="100px" height="100px" class="img-responsive">
+                  <img src="<?php echo _CONST_IMAGE_URL ?>Logo-DT.png" width="100px" height="100px" class="img-responsive">
                 </div>
               </div>
 
@@ -1019,7 +1019,7 @@ require_once _CONST_VIEW_PATH . 'header.php';
             <div id="privacy" class="col-md-12">
               <div class="col-md-2 pull-right">
                 <div class="logo">
-                  <img src="<?php echo _CONST_IMAGE_URL?>Logo-DT.png" width="100px" height="100px" class="img-responsive">
+                  <img src="<?php echo _CONST_IMAGE_URL ?>Logo-DT.png" width="100px" height="100px" class="img-responsive">
                 </div>
               </div>
 
