@@ -20,18 +20,18 @@
         </div>
         <div class="right">
 
-            <a href="<?php echo _CONST_WEB_URL; ?>/latest-news"><i class="fa fa-bolt fa-lg" style="color:#FFFFFF;padding: 0 10px;"></i></a>
+            <a href="<?php echo _CONST_WEB_URL; ?>/latest-news" title="Latest News"><i class="fa fa-bolt fa-lg" style="color:#FFFFFF;padding: 0 10px;"></i></a>
             |
-            <a href="javascript:void(0);" id="c-button--shareicons" class="c-button"><i class="fa fa-share-alt fa-lg" style="color:#FFFFFF;padding: 0 10px;"></i></a>
+            <a href="javascript:void(0);" id="c-button--shareicons" class="c-button" title="Share"><i class="fa fa-share-alt fa-lg" style="color:#FFFFFF;padding: 0 10px;"></i></a>
             |
-            <a href="javascript:void(0);" id="c-button--products-service" class="c-button"><i class="fa fa-briefcase fa-lg" style="color:#FFFFFF;padding: 0 10px;"></i></a>
+            <a href="javascript:void(0);" id="c-button--products-service" class="c-button" title="Other Websites"><i class="fa fa-briefcase fa-lg" style="color:#FFFFFF;padding: 0 10px;"></i></a>
         </div>
         <div id="header-search-input"></div>
         <div class="left">
-          <a href="javascript:void(0);" id="horizontal-nav-toggle"><i class="fa fa-bars fa-lg" style="color:#FFFFFF;padding: 0 10px;"></i></a>
-          |
-          <a href="javascript:void(0);" id="c-button--search" class="c-button"><i class="fa fa-search fa-lg" style="color:#FFFFFF;padding: 0 10px;"></i></a>
-
+          <a href="javascript:void(0);" id="horizontal-nav-toggle" title="Menu"><i class="fa fa-bars fa-lg" style="color:#FFFFFF;padding: 0 10px;"></i></a>
+          <!-- |
+          <a href="javascript:void(0);" id="c-button--search" class="c-button" title="Search"><i class="fa fa-search fa-lg" style="color:#FFFFFF;padding: 0 10px;"></i></a>
+ -->
         </div>
           <div class="header-content bigmegamenu clearfix">
               <nav class="wsmenu slideLeft clearfix menuopen">
@@ -47,7 +47,7 @@
 	?>
                 <span class="seperator">|</span>
                 <li>
-                  <a href="<?php echo $value['url']; ?>"><i class="fa fa-align-justify"></i>&nbsp;&nbsp;<?php echo $value['name']; ?></a>
+                  <a href="<?php echo $value['url']; ?>" title="<?php echo $value['name']; ?>"><i class="fa fa-align-justify"></i>&nbsp;&nbsp;<?php echo $value['name']; ?></a>
                 </li>
 
                 <?php
@@ -108,9 +108,9 @@
 <div class="mobile-footerheader">
   <nav>
     <ul class="nav nav-justified">
-      <li><a href="<?php echo _CONST_WEB_URL; ?>/latest-news"><i class="fa fa-bolt fa-lg" style="color:#FFFFFF;padding: 0 10px;"></i></a></li>
-      <li><a href="javascript:void(0);" id="c-button--shareicons-mob" class="c-button"><i class="fa fa-share-alt fa-lg" style="color:#FFFFFF;padding: 0 10px;"></i></a></li>
-      <li><a href="javascript:void(0);" id="c-button--products-service-mob" class="c-button"><i class="fa fa-briefcase fa-lg" style="color:#FFFFFF;padding: 0 10px;"></i></a></li>
+      <li><a href="<?php echo _CONST_WEB_URL; ?>/latest-news" title="Latest News"><i class="fa fa-bolt fa-lg" style="color:#FFFFFF;padding: 0 10px;"></i></a></li>
+      <li><a href="javascript:void(0);" id="c-button--shareicons-mob" class="c-button" title="Share"><i class="fa fa-share-alt fa-lg" style="color:#FFFFFF;padding: 0 10px;"></i></a></li>
+      <li><a href="javascript:void(0);" id="c-button--products-service-mob" class="c-button" title="Other Websites"><i class="fa fa-briefcase fa-lg" style="color:#FFFFFF;padding: 0 10px;"></i></a></li>
     </ul>
   </nav>
 </div>
