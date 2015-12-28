@@ -141,6 +141,7 @@ class magazine extends magazineModel {
                   </div>';
 			$this->_data['completeIssues'] = $this->_magazineModel->checkAccessValidity();
 			$this->_data['partialIssues'] = $this->_magazineModel->getPartialIssueList();
+      $this->_data['specialIssue'] = $this->_magazineModel->checkSamvatSpecialIssueValidity('november2015');
 		} else {
 			$this->_data['show_login'] = 1;
 			$this->_data['header_text'] = '<div style="display:inline-block;vertical-align: bottom; padding-right:10px;">';
@@ -258,7 +259,7 @@ class magazine extends magazineModel {
 			                        <input type="submit" class="btn btn-block" id="signup" value="Sign Up">
 			                      </div>
                             <div class="form-group form-fields-width text-center">
-                              <em><strong>Your Samvat copy will be delivered to you soon! Stay Tuned.</strong></em>
+                              
                             </div>
 			                    </div>
 			                  </form>
@@ -291,6 +292,7 @@ class magazine extends magazineModel {
                     </div>
                   </div>';
 			$this->_data['completeIssues'] = 0;
+      $this->_data['specialIssue'] = false;
 		}
 
 		$this->_data['aboutdt'] = $this->_magazineModel->getAboutSection();

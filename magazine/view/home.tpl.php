@@ -188,7 +188,7 @@ foreach ($this->_data['whydt']['featurelist-right'] as $key => $value) {
               <h2>Sneak Peek</h2>
             </div>
             <div style="text-align: justify;">
-                <p>The December issue of Dalal Times Magazine highlights India’s economic growth in both domestic and global terms in an interview with Andrew Holland, CEO, Ambit Investment Advisors. The second issue (Vol. II) of the magazine also brings to you reader-favourite segments like How Good A Bet, Gems In The Offing, Pink Stock et al for investors to make better and informed portfolio decisions. Subscribe and read stock recommendations and suggestions that hold ground even in the present turbulent phase of the market.</p>
+                <p>The January issue of Dalal Times Magazine came out with a changed theme. From January 2016 onwards, we will be looking at companies, groups or companies within a business group that have the potential to create wealth for its investors in the future and also have some good track record attached to them. This time read our Cover Story on the Godrej Group and what the Chairperson of the group Adi Godrej have to say. The third issue (Vol. II) of the magazine also brings to you reader-favourite segments like How Good A Bet, Gems In The Offing, Pink Stock et al for investors to make better and informed portfolio decisions. Subscribe and read stock recommendations and suggestions that hold ground even in the present turbulent phase of the market.</p>
               </div>
           </div>
         </div>
@@ -412,6 +412,8 @@ if ($_SESSION['_loggedIn'] == 1) {
           </div>
           <?php }
 	?>
+	<?
+	if($this->_data['specialIssue']==true){?>
           <div class="row">
             <h2 style="margin-bottom: 10px;font-size: 20px;">Special Issues</h2>
             <div id="liquid2" class="liquid">
@@ -425,6 +427,7 @@ if ($_SESSION['_loggedIn'] == 1) {
               <span class="next"></span>
             </div>
           </div>
+         <?php } ?>
         <?php if ($partial_issue_list != '') {?>
             <div class="row">
               <h2 style="margin-bottom: 10px;font-size: 20px;">Partial Copy</h2>
