@@ -412,8 +412,6 @@ if ($_SESSION['_loggedIn'] == 1) {
           </div>
           <?php }
 	?>
-	<?
-	if($this->_data['specialIssue']==true){?>
           <div class="row">
             <h2 style="margin-bottom: 10px;font-size: 20px;">Special Issues</h2>
             <div id="liquid2" class="liquid">
@@ -427,7 +425,7 @@ if ($_SESSION['_loggedIn'] == 1) {
               <span class="next"></span>
             </div>
           </div>
-         <?php } ?>
+
         <?php if ($partial_issue_list != '') {?>
             <div class="row">
               <h2 style="margin-bottom: 10px;font-size: 20px;">Partial Copy</h2>
