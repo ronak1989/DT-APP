@@ -352,6 +352,7 @@ if ($_SESSION['_loggedIn'] == 1) {
 	$complete_issue_list = '';
 	if (is_array($this->_data['completeIssues'])) {
 		$issue_array = array(
+      'january2016' => array('issue' => 'Jan 2016', 'issue_url' => '/magazine/january2016', 'issue_cover_img' => 'view/january2016/cover.jpg'),
       'december2015' => array('issue' => 'Dec 2015', 'issue_url' => '/magazine/december2015', 'issue_cover_img' => 'view/december2015/cover.jpg'),
 			'november2015' => array('issue' => 'Nov 2015', 'issue_url' => '/magazine/november2015', 'issue_cover_img' => 'view/november2015/cover.jpg'),
 			'october2015' => array('issue' => 'Oct 2015', 'issue_url' => '/magazine/october2015', 'issue_cover_img' => 'view/october2015/cover.jpg'),
@@ -367,6 +368,7 @@ if ($_SESSION['_loggedIn'] == 1) {
 		}
 	}
 	$partial_issue_array = array(
+    'january2016' => array('issue' => 'Jan 2016', 'issue_url' => '/sneak-preview/january2016', 'issue_cover_img' => 'view/partial-january2016/cover.jpg'),
     'december2015' => array('issue' => 'Dec 2015', 'issue_url' => '/sneak-preview/december2015', 'issue_cover_img' => 'view/partial-december2015/cover.jpg'),
 		'november2015' => array('issue' => 'Nov 2015', 'issue_url' => '/sneak-preview/november2015', 'issue_cover_img' => 'view/partial-november2015/cover.jpg'),
 		'october2015' => array('issue' => 'Oct 2015', 'issue_url' => '/sneak-preview/october2015', 'issue_cover_img' => 'view/partial-october2015/cover.jpg'),
