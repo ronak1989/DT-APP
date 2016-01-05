@@ -1513,25 +1513,29 @@ class magazineModel extends Database {
 			$this->_queryResult = $this->resultset();
 			$months = array();
 			if (date('Ymd', strtotime($this->_queryResult[0]['created_date'])) < '20150801') {
-				$partial_issue_startdt = (int) date('m', strtotime('-4 months', strtotime($this->_queryResult[0]['created_date'])));
+        $partial_issue_startdt = (int) date('m', strtotime('-4 months', strtotime($this->_queryResult[0]['created_date'])));
+				$partial_issue_year = (int) date('Y', strtotime('-4 months', strtotime($this->_queryResult[0]['created_date'])));
 			} else {
-				$partial_issue_startdt = (int) date('m', strtotime('-5 months', strtotime($this->_queryResult[0]['created_date'])));
+        $partial_issue_startdt = (int) date('m', strtotime('-5 months', strtotime($this->_queryResult[0]['created_date'])));
+				$partial_issue_year = (int) date('Y', strtotime('-5 months', strtotime($this->_queryResult[0]['created_date'])));
 			}
 
 			for ($x = $partial_issue_startdt; $x < $partial_issue_startdt + 3; $x++) {
-				$months[] = strtolower(date('FY', mktime(0, 0, 0, $x, 1)));
+				$months[] = strtolower(date('FY', mktime(0, 0, 0, $x, 1,$partial_issue_year)));
 			}
 		} else {
 			$months = array();
 			if (date('Ymd', strtotime($this->_queryResult[0]['created_date'])) < '20150831') {
-				$partial_issue_startdt = (int) date('m', strtotime('-5 months', strtotime($this->_queryResult[0]['created_date'])));
+        $partial_issue_startdt = (int) date('m', strtotime('-5 months', strtotime($this->_queryResult[0]['created_date'])));
+				$partial_issue_year = (int) date('Y', strtotime('-5 months', strtotime($this->_queryResult[0]['created_date'])));
 				for ($x = $partial_issue_startdt; $x < $partial_issue_startdt + 5; $x++) {
-					$months[] = strtolower(date('FY', mktime(0, 0, 0, $x, 1)));
+					$months[] = strtolower(date('FY', mktime(0, 0, 0, $x, 1,$partial_issue_year)));
 				}
 			} else {
-				$partial_issue_startdt = (int) date('m', strtotime('-6 months', strtotime($this->_queryResult[0]['created_date'])));
+        $partial_issue_startdt = (int) date('m', strtotime('-6 months', strtotime($this->_queryResult[0]['created_date'])));
+				$partial_issue_year = (int) date('Y', strtotime('-6 months', strtotime($this->_queryResult[0]['created_date'])));
 				for ($x = $partial_issue_startdt; $x < $partial_issue_startdt + 6; $x++) {
-					$months[] = strtolower(date('FY', mktime(0, 0, 0, $x, 1)));
+					$months[] = strtolower(date('FY', mktime(0, 0, 0, $x, 1,$partial_issue_year)));
 				}
 			}
 		}

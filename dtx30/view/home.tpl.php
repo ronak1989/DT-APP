@@ -150,7 +150,7 @@ if (!isset($_SESSION['_loggedIn'])) {
                     <td>Bharat Forging</td>
                     <td>Auto Ancillary</td>
                     <td>1.1</td>
-                    <td>1.1</td>
+                    <td>1</td>
                   </tr>
                   <tr class="odd">
                     <td>Castrol India</td>
@@ -174,7 +174,7 @@ if (!isset($_SESSION['_loggedIn'])) {
                     <td>HCL Technologies</td>
                     <td>IT</td>
                     <td>0.8</td>
-                    <td>0.8</td>
+                    <td>0.7</td>
                   </tr>
                   <tr class="odd">
                     <td>HDFC Bank</td>
@@ -238,7 +238,7 @@ if (!isset($_SESSION['_loggedIn'])) {
                     <td>Mahindra & Mahindra</td>
                     <td>Automobile</td>
                     <td>1</td>
-                    <td>0.9</td>
+                    <td>0.8</td>
                   </tr>
                   <tr class="odd">
                     <td>Maruti Suzuki India</td>
@@ -256,25 +256,25 @@ if (!isset($_SESSION['_loggedIn'])) {
                     <td>Persistent Technologies</td>
                     <td>IT</td>
                     <td>0.7</td>
-                    <td>0.7</td>
+                    <td>0.8</td>
                   </tr>
                   <tr class="even">
                     <td>Pidellite Industries</td>
                     <td>FMCG</td>
                     <td>1.1</td>
-                    <td>1.1</td>
+                    <td>1.2</td>
                   </tr>
                   <tr class="odd">
                     <td>Repco Home Finance</td>
                     <td>Finance</td>
                     <td>0.9</td>
-                    <td>0.8</td>
+                    <td>0.7</td>
                   </tr>
                   <tr class="even">
                     <td>State Bank Of India</td>
                     <td>Banking</td>
                     <td>1</td>
-                    <td>0.8</td>
+                    <td>0.9</td>
                   </tr>
                   <tr class="odd">
                     <td>Stride Arcolab</td>
@@ -304,7 +304,7 @@ if (!isset($_SESSION['_loggedIn'])) {
                     <td>UltraTech Cement</td>
                     <td>Cement</td>
                     <td>1.1</td>
-                    <td>1.1</td>
+                    <td>1.2</td>
                   </tr>
                   <tr class="even">
                     <td>VA Tech Wabag</td>

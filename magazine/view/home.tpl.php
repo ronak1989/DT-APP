@@ -386,7 +386,7 @@ if ($_SESSION['_loggedIn'] == 1) {
 	$partial_issue_list = '';
 	$this->_data['partialIssues'] = array_reverse($this->_data['partialIssues']);
 	for ($i = 0; $i < count($this->_data['partialIssues']); $i++) {
-		$partial_issue_list .= '<li><a href="' . $partial_issue_array[$this->_data['partialIssues']][$i]['issue_url'] . '" target="_new"><img src="' . $partial_issue_array[$this->_data['partialIssues']][$i]['issue_cover_img'] . '" width="88" height="126" alt="" border="0" title="' . $partial_issue_array[$this->_data['partialIssues']][$i]['issue'] . '" /><br>' . $partial_issue_array[$this->_data['partialIssues']][$i]['issue'] . '</a></li>';
+		$partial_issue_list .= '<li><a href="' . $partial_issue_array[$this->_data['partialIssues'][$i]]['issue_url'] . '" target="_new"><img src="' . $partial_issue_array[$this->_data['partialIssues'][$i]]['issue_cover_img'] . '" width="88" height="126" alt="" border="0" title="' . $partial_issue_array[$this->_data['partialIssues'][$i]]['issue'] . '" /><br>' . $partial_issue_array[$this->_data['partialIssues'][$i]]['issue'] . '</a></li>';
 	}
 	?>
     <section class="review norm-img" style="background-color: #000000;">
