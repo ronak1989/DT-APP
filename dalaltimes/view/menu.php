@@ -39,7 +39,7 @@
                   <a href="<?php echo _CONST_WEB_URL; ?>/" class="active">Home</a>
                 </li>
                 <?php foreach ($menuUrl as $key => $value) {
-	if (in_array(strtolower($value['name']), array("", 'budgets', 'mutual funds', 'chart of the day', 'the forecaster'))) {
+	if (in_array(strtolower($value['name']), array("", 'budgets', 'mutual funds', 'the forecaster'))) {
 		continue;
 	}
 

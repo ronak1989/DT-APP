@@ -25,7 +25,7 @@ class EditorModel extends Database {
 			'8' => 'MUTUAL FUNDS',
 			/*'9' => 'IPO',*/
 			/*'10' => 'Wire News',*/
-			'11' => 'Chart of the Day',
+			'11' => 'Technical Corner',
 			'12' => 'The Forecaster');
 	}
 
@@ -75,7 +75,7 @@ class EditorModel extends Database {
 			'9' => array(),
 			/*Wire News*/
 			'10' => array(),
-			'11' => array(),
+			'11' => array('1'=>'Sensex Rider', '2'=>'Nifty Rider'),
 			'12' => array());
 		return $subCategory[$newsCategoryId];
 	}

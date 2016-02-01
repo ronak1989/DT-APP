@@ -287,7 +287,7 @@ foreach ($data['earnings-widget'] as $key => $value) {
 	<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 PT16 PL16">
     	<div id="chart-of-the-day-container">
              <div class="chart-of-the-day-title">
-                Chart of the Day
+                Technical Corner
             </div>
             <a href="<?php echo $data['chart-of-the-day'][0]['news_url']; ?>">
             	<div class="chart-of-the-day-img">

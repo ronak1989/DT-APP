@@ -10,7 +10,7 @@ $(document).ready(function() {
     }
 	});
 	header_height = $(".navigation").height();
-	/*var menuSearchBtn = document.querySelector('#c-button--search');
+	var menuSearchBtn = document.querySelector('#c-button--search');
 	var menuSearchBtnMob = document.querySelector('#c-button--search-mob');
 		menuSearchBtn.addEventListener('click', function(e) {
 		    e.preventDefault;
@@ -21,7 +21,7 @@ $(document).ready(function() {
 		    e.preventDefault;
 		    menuSearch.open();
 		});
-*/
+
 		var shareIcons = new Menu({
 		    wrapper: '#body-container',
 		    type: 'shareicons',
