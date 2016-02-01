@@ -29,9 +29,8 @@
         <div id="header-search-input"></div>
         <div class="left">
           <a href="javascript:void(0);" id="horizontal-nav-toggle" title="Menu"><i class="fa fa-bars fa-lg" style="color:#FFFFFF;padding: 0 10px;"></i></a>
-          <!-- |
+          |
           <a href="javascript:void(0);" id="c-button--search" class="c-button" title="Search"><i class="fa fa-search fa-lg" style="color:#FFFFFF;padding: 0 10px;"></i></a>
- -->
         </div>
           <div class="header-content bigmegamenu clearfix">
               <nav class="wsmenu slideLeft clearfix menuopen">
