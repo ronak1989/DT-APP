@@ -257,24 +257,24 @@ foreach ($data['news-widget'] as $key => $value) {
     </div>
 	<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 PT16 PL16">
     	<div class="category-image hidden-xs">
-            <a class="subovrimg" href="<?php echo $data['earnings-widget'][0]['category_url']; ?>">
-                <span class="subsechead category-orange-bkgrnd">Earnings</span>
+            <a class="subovrimg" href="<?php echo $data['budget-widget'][0]['category_url']; ?>">
+                <span class="subsechead category-orange-bkgrnd">Budget</span>
             </a>
-            <img style="cursor: pointer; width:100%;" src="<?php echo $data['earnings-widget'][0]['image_300']; ?>">
+            <img style="cursor: pointer; width:100%;" src="<?php echo $data['budget-widget'][0]['image_300']; ?>">
             <div class="headovrimg">
-                <a href="<?php echo $data['earnings-widget'][0]['news_url']; ?>" class="category-img-heading"><?php echo $data['earnings-widget'][0]['headline']; ?></a>
+                <a href="<?php echo $data['budget-widget'][0]['news_url']; ?>" class="category-img-heading"><?php echo $data['budget-widget'][0]['headline']; ?></a>
              </div>
          </div>
         <div class="news-category category-orange-bkgrnd visible-xs-block">
-            Earnings
-            <span class="view-all"><a href="<?php echo $data['earnings-widget'][0]['category_url']; ?>">View All >></a></span>
+            Budget
+            <span class="view-all"><a href="<?php echo $data['budget-widget'][0]['category_url']; ?>">View All >></a></span>
         </div>
         <div id="category-news">
             <ul>
 <?php
-unset($data['earnings-widget'][0]);
-$total_articles = count($data['earnings-widget']);
-foreach ($data['earnings-widget'] as $key => $value) {
+unset($data['budget-widget'][0]);
+$total_articles = count($data['budget-widget']);
+foreach ($data['budget-widget'] as $key => $value) {
 	$li_class = ($total_articles == $key) ? 'last' : '';
 	?>
     <li class="<?php echo $li_class; ?>"><i class="fa fa-arrow-right"></i><a href="<?php echo $value['news_url']; ?>"><?php echo $value['headline']; ?></a></li>

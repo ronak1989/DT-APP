@@ -180,7 +180,8 @@ class NewsModel extends EditorModel {
 		$result['corporate-widget'] = $this->getNewsDetails('desc', 0, 5, array('publish_status' => 1, 'category_id' => '2'), 'array')['rows'];
 		$result['news-widget'] = $this->getNewsDetails('desc', 0, 5, array('publish_status' => 1, 'category_id' => '3'), 'array')['rows'];
 		$result['investing-widget'] = $this->getNewsDetails('desc', 0, 5, array('publish_status' => 1, 'category_id' => '4'), 'array')['rows'];
-		$result['earnings-widget'] = $this->getNewsDetails('desc', 0, 5, array('publish_status' => 1, 'category_id' => '5'), 'array')['rows'];
+		//$result['earnings-widget'] = $this->getNewsDetails('desc', 0, 5, array('publish_status' => 1, 'category_id' => '5'), 'array')['rows'];
+		$result['budget-widget'] = $this->getNewsDetails('desc', 0, 5, array('publish_status' => 1, 'category_id' => '6'), 'array')['rows'];
 		$result['economy-widget'] = $this->getNewsDetails('desc', 0, 5, array('publish_status' => 1, 'category_id' => '7'), 'array')['rows'];
 		/*echo '<pre>' . print_r($result) . '</pre>';
 		die();*/
