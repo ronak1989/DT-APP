@@ -680,7 +680,7 @@ class magazine extends magazineModel {
 	}
 
 	public function showSubscribedBook() {
-		$this->_data['result'] = $this->_magazineModel->checkAccessValidity($this->_issue);
+		$this->_data['result'] = $this->_magazineModel->checkAccessValidity();
 		if (in_array($this->_issue, $this->_data['result'])) {
 			require_once _CONST_VIEW_PATH . $this->_issue . '/index.php';
 		}
