@@ -188,7 +188,7 @@ foreach ($this->_data['whydt']['featurelist-right'] as $key => $value) {
               <h2>Sneak Peek</h2>
             </div>
             <div style="text-align: justify;">
-                <p>The January issue of Dalal Times Magazine came out with a changed theme. From January 2016 onwards, we will be looking at companies, groups or companies within a business group that have the potential to create wealth for its investors in the future and also have some good track record attached to them. This time read our Cover Story on the Godrej Group and what the Chairperson of the group Adi Godrej have to say. The third issue (Vol. II) of the magazine also brings to you reader-favourite segments like How Good A Bet, Gems In The Offing, Pink Stock et al for investors to make better and informed portfolio decisions. Subscribe and read stock recommendations and suggestions that hold ground even in the present turbulent phase of the market.</p>
+                <p>In the April issue’s Cover Story, we bring to you India’s largest engineering company Larsen &Turbo. The analytical story focuses on how Larsen &Turbo has managed to stay ahead of the competition amid all the peaks and troughs of different economic cycles. The story also delves into how value unlocking in many of its subsidiaries would create wealth for the investors in the future. In the regular sections, we have DTX30 which has till date managed to outperform the benchmark indices since its inception. Furthermore, we have critically discussed the factors like how global factors affected the Indian equities and what to expect from the Indian markets in near to medium term. We also have carried two How Good a Bet columns with Idea Cellular and Reliance Infrastructure analysed in detail.</p>
               </div>
           </div>
         </div>
@@ -352,6 +352,7 @@ if ($_SESSION['_loggedIn'] == 1) {
 	$complete_issue_list = '';
 	if (is_array($this->_data['completeIssues'])) {
 		$issue_array = array(
+      'april2016' => array('issue' => 'April 2016', 'issue_url' => '/magazine/april2016', 'issue_cover_img' => 'view/april2016/cover.jpg'),
       'march2016' => array('issue' => 'March 2016', 'issue_url' => '/magazine/march2016', 'issue_cover_img' => 'view/march2016/cover.jpg'),
       'february2016' => array('issue' => 'Feb 2016', 'issue_url' => '/magazine/february2016', 'issue_cover_img' => 'view/february2016/cover.jpg'),
       'january2016' => array('issue' => 'Jan 2016', 'issue_url' => '/magazine/january2016', 'issue_cover_img' => 'view/january2016/cover.jpg'),
@@ -370,6 +371,7 @@ if ($_SESSION['_loggedIn'] == 1) {
 		}
 	}
 	$partial_issue_array = array(
+    'april2016' => array('issue' => 'April 2016', 'issue_url' => '/sneak-preview/april2016', 'issue_cover_img' => 'view/partial-april2016/cover.jpg'),
     'march2016' => array('issue' => 'March 2016', 'issue_url' => '/sneak-preview/march2016', 'issue_cover_img' => 'view/partial-march2016/cover.jpg'),
     'february2016' => array('issue' => 'Feb 2016', 'issue_url' => '/sneak-preview/february2016', 'issue_cover_img' => 'view/partial-february2016/cover.jpg'),
     'january2016' => array('issue' => 'Jan 2016', 'issue_url' => '/sneak-preview/january2016', 'issue_cover_img' => 'view/partial-january2016/cover.jpg'),
